@@ -1,0 +1,1323 @@
+/home/vincentq/scratch/ET_BIDS***/home/vincentq/scratch/ET_fmriprep_anat_20.1.1***/home/vincentq/scratch/src/ET_fmriprep_preopt.list******/home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg***ET
+Processing: sub-7400
+Running task 22
+Commandline: singularity run -B /home/vincentq:/home/fmriprep --home /home/fmriprep --cleanenv -B /home/vincentq/scratch/ET_BIDS:/data:ro -B /home/vincentq/scratch/ET_fmriprep_anat_20.1.1:/output -B /home/vincentq/scratch/src:/codes -B /home/vincentq/scratch/templateflow:/templateflow -B /home/vincentq/scratch/ET_fmriprep_anat_work:/work -B /home/vincentq/scratch/ET_fmriprep_anat_20.1.1/freesurfer-6.0.1:/fsdir /home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg /data /output participant --participant-label 7400 -w /work --output-spaces MNI152NLin2009cAsym:res-2 anat fsnative fsaverage5 --anat-only --bids-filter-file /codes/pre_opt.json --fs-subjects-dir /fsdir --fs-license-file /home/fmriprep/.freesurfer/license.txt --cifti-out 91k --return-all-components --write-graph --skip_bids_validation --notrack --resource-monitor
+200813-22:40:39,560 nipype.workflow IMPORTANT:
+	 
+    Running fMRIPREP version 20.1.1:
+      * BIDS dataset path: /data.
+      * Participant list: ['7400'].
+      * Run identifier: 20200813-223852_a3872698-9024-4664-8da3-5e0d2b72af4e.
+      * Output spaces: MNI152NLin2009cAsym:res-2 anat fsnative fsaverage:den-10k.
+      * Pre-run FreeSurfer's SUBJECTS_DIR: /fsdir.
+200813-22:43:16,257 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 149 nodes built successfully.
+200813-22:43:55,317 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+200813-22:44:04,947 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.lap_tmpl" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/lap_tmpl".
+200813-22:44:05,8 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.res_tmpl" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/res_tmpl".
+200813-22:44:05,65 nipype.workflow INFO:
+	 [Node] Running "lap_tmpl" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_T1w_maths.nii.gz Laplacian /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz 1.5 1
+200813-22:44:05,100 nipype.workflow INFO:
+	 [Node] Running "res_tmpl" ("niworkflows.interfaces.ants.ResampleImageBySpacing"), a CommandLine Interface with command:
+ResampleImageBySpacing 3 /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz tpl-OASIS30ANTs_res-01_T1w_resampled.nii.gz 4 4 4 1
+200813-22:44:05,264 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.bidssrc" in "/work/fmriprep_wf/single_subject_7400_wf/bidssrc".
+200813-22:44:06,333 nipype.workflow INFO:
+	 [Node] Running "bidssrc" ("niworkflows.interfaces.bids.BIDSDataGrabber")
+200813-22:44:06,335 nipype.interface INFO:
+	 No "flair" images found for sub-7400
+200813-22:44:06,336 nipype.interface INFO:
+	 No "sbref" images found for sub-7400
+200813-22:44:06,336 nipype.interface INFO:
+	 No "roi" images found for sub-7400
+200813-22:44:06,356 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.bidssrc".
+200813-22:44:07,977 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.res_tmpl".
+200813-22:44:09,38 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.t1w_ref_dimensions" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_template_wf/t1w_ref_dimensions".
+200813-22:44:10,28 nipype.workflow INFO:
+	 [Node] Running "t1w_ref_dimensions" ("niworkflows.interfaces.images.TemplateDimensions")
+200813-22:44:10,690 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.bids_info" in "/work/fmriprep_wf/single_subject_7400_wf/bids_info".
+200813-22:44:10,857 nipype.workflow INFO:
+	 [Node] Running "bids_info" ("niworkflows.interfaces.bids.BIDSInfo")
+200813-22:44:11,268 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.bids_info".
+200813-22:44:11,468 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.t1w_ref_dimensions".
+200813-22:44:13,13 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_derivatives_wf.raw_sources" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_derivatives_wf/raw_sources".
+200813-22:44:14,675 nipype.workflow INFO:
+	 [Node] Running "raw_sources" ("nipype.interfaces.utility.wrappers.Function")
+200813-22:44:14,736 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_derivatives_wf.raw_sources".
+200813-22:44:15,317 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.t1w_conform" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_template_wf/t1w_conform".
+200813-22:44:15,551 nipype.workflow INFO:
+	 [Node] Setting-up "_t1w_conform0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_template_wf/t1w_conform/mapflow/_t1w_conform0".
+200813-22:44:15,809 nipype.workflow INFO:
+	 [Node] Running "_t1w_conform0" ("niworkflows.interfaces.images.Conform")
+200813-22:44:15,897 nipype.workflow INFO:
+	 [Node] Finished "_t1w_conform0".
+200813-22:44:15,905 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.t1w_conform".
+200813-22:44:16,964 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.get1st" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_template_wf/get1st".
+200813-22:44:18,255 nipype.workflow INFO:
+	 [Node] Running "get1st" ("nipype.interfaces.utility.base.Select")
+200813-22:44:18,267 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.get1st".
+200813-22:44:20,967 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.fov_check" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/fov_check".
+200813-22:44:21,47 nipype.workflow INFO:
+	 [Node] Running "fov_check" ("nipype.interfaces.utility.wrappers.Function")
+200813-22:44:21,387 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.fov_check".
+200813-22:44:21,523 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.lap_tmpl".
+200813-22:44:22,102 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.truncate_images" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/truncate_images".
+200813-22:44:22,171 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.recon_config" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/recon_config".
+200813-22:44:22,205 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+200813-22:44:22,217 nipype.workflow INFO:
+	 [Node] Running "_truncate_images0" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths.nii.gz TruncateImageIntensity /data/sub-7400/ses-1/anat/sub-7400_run-1_T1w.nii.gz 0.01 0.999 256
+200813-22:44:22,557 nipype.workflow INFO:
+	 [Node] Running "recon_config" ("niworkflows.interfaces.freesurfer.FSDetectInputs")
+200813-22:44:22,829 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.recon_config".
+200813-22:44:22,973 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.mrg_tmpl" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/mrg_tmpl".
+200813-22:44:22,976 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon1".
+200813-22:44:23,21 nipype.workflow INFO:
+	 [Node] Running "mrg_tmpl" ("nipype.interfaces.utility.base.Merge")
+200813-22:44:23,33 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.mrg_tmpl".
+200813-22:44:23,183 nipype.workflow INFO:
+	 [Node] Running "autorecon1" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon1 -i /data/sub-7400/ses-1/anat/sub-7400_run-1_T1w.nii.gz -T2 /data/sub-7400/ses-1/anat/sub-7400_run-1_T2w.nii.gz -noskullstrip -openmp 8 -subjid sub-7400 -sd /fsdir
+200813-22:44:30,8 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0".
+200813-22:44:30,116 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.truncate_images".
+200813-22:44:30,977 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.inu_n4" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4".
+200813-22:44:31,78 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+200813-22:44:31,221 nipype.workflow INFO:
+	 [Node] Running "_inu_n40" ("nipype.interfaces.ants.segmentation.N4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0/sub-7400_run-1_T1w_maths.nii.gz --convergence [ 50x50x50x50, 1e-07 ] --output sub-7400_run-1_T1w_maths_corrected.nii.gz --shrink-factor 4
+200813-22:45:58,489 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40".
+200813-22:45:58,497 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.inu_n4".
+200813-22:46:00,215 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.res_target" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/res_target".
+200813-22:46:00,215 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.lap_target" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/lap_target".
+200813-22:46:00,349 nipype.workflow INFO:
+	 [Node] Running "lap_target" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_maths.nii.gz Laplacian /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-7400_run-1_T1w_maths_corrected.nii.gz 1.5 1
+200813-22:46:00,686 nipype.workflow INFO:
+	 [Node] Running "res_target" ("niworkflows.interfaces.ants.ResampleImageBySpacing"), a CommandLine Interface with command:
+ResampleImageBySpacing 3 /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-7400_run-1_T1w_maths_corrected.nii.gz sub-7400_run-1_T1w_maths_corrected_resampled.nii.gz 4 4 4 1
+200813-22:46:02,951 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.res_target".
+200813-22:46:04,203 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.init_aff" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/init_aff".
+200813-22:46:04,662 nipype.workflow INFO:
+	 [Node] Running "init_aff" ("niworkflows.interfaces.ants.AI"), a CommandLine Interface with command:
+antsAI -c [10,0.000001,10] -d 3 -x /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz -m Mattes[/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/res_tmpl/tpl-OASIS30ANTs_res-01_T1w_resampled.nii.gz,/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/res_target/sub-7400_run-1_T1w_maths_corrected_resampled.nii.gz,32,Regular,0.250000] -o initialization.mat -p 0 -s [15.000000,0.100000] -t Affine[0.100000] -v 1
+200813-22:46:08,12 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.init_aff".
+200813-22:46:13,759 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.lap_target".
+200813-22:46:15,80 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.mrg_target" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/mrg_target".
+200813-22:46:16,848 nipype.workflow INFO:
+	 [Node] Running "mrg_target" ("nipype.interfaces.utility.base.Merge")
+200813-22:46:16,883 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.mrg_target".
+200813-22:46:18,194 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.norm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/norm".
+200813-22:46:18,868 nipype.workflow INFO:
+	 [Node] Running "norm" ("niworkflows.interfaces.fixes.FixHeaderRegistration"), a CommandLine Interface with command:
+antsRegistration --collapse-output-transforms 1 --dimensionality 3 --float 1 --initial-moving-transform [ /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/init_aff/initialization.mat, 0 ] --initialize-transforms-per-stage 0 --interpolation LanczosWindowedSinc --output [ anat_to_template, anat_to_template_Warped.nii.gz ] --transform Rigid[ 0.1 ] --metric MI[ /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz, /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-7400_run-1_T1w_maths_corrected.nii.gz, 1, 32, Regular, 0.25 ] --convergence [ 1000x500x250x100, 1e-08, 10 ] --smoothing-sigmas 4.0x2.0x1.0x0.0vox --shrink-factors 8x4x2x1 --use-histogram-matching 1 --masks [ /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz, NULL ] --transform Affine[ 0.1 ] --metric MI[ /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz, /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-7400_run-1_T1w_maths_corrected.nii.gz, 1, 32, Regular, 0.25 ] --convergence [ 1000x500x250x100, 1e-08, 10 ] --smoothing-sigmas 4.0x2.0x1.0x0.0vox --shrink-factors 8x4x2x1 --use-histogram-matching 1 --masks [ /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz, NULL ] --transform SyN[ 0.1, 3.0, 0.0 ] --metric CC[ /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz, /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-7400_run-1_T1w_maths_corrected.nii.gz, 0.5, 4, None, 1 ] --metric CC[ /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/lap_tmpl/tpl-OASIS30ANTs_res-01_T1w_maths.nii.gz, /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/lap_target/sub-7400_run-1_T1w_maths_corrected_maths.nii.gz, 0.5, 4, None, 1 ] --convergence [ 50x10x0, 1e-09, 15 ] --smoothing-sigmas 2.0x1.0x0.0vox --shrink-factors 4x2x1 --use-histogram-matching 1 --masks [ /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz, NULL ] -v --winsorize-image-intensities [ 0.025, 0.975 ]  --write-composite-transform 0
+200813-22:51:08,488 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon1".
+200813-22:51:10,656 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.fsnative2t1w_xfm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/fsnative2t1w_xfm".
+200813-22:51:11,38 nipype.workflow INFO:
+	 [Node] Running "fsnative2t1w_xfm" ("niworkflows.interfaces.freesurfer.PatchedRobustRegister"), a CommandLine Interface with command:
+mri_robust_register --satit --iscale --lta /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/fsnative2t1w_xfm/T1_robustreg.lta --mov /fsdir/sub-7400/mri/T1.mgz --dst /data/sub-7400/ses-1/anat/sub-7400_run-1_T1w.nii.gz
+200813-22:52:42,685 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.fsnative2t1w_xfm".
+200813-22:52:45,658 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.t1w2fsnative_xfm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/t1w2fsnative_xfm".
+200813-22:52:45,711 nipype.workflow INFO:
+	 [Node] Running "t1w2fsnative_xfm" ("niworkflows.interfaces.freesurfer.PatchedLTAConvert"), a CommandLine Interface with command:
+lta_convert --inlta /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/fsnative2t1w_xfm/T1_robustreg.lta --invert --outlta /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/t1w2fsnative_xfm/out.lta
+200813-22:52:45,903 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.t1w2fsnative_xfm".
+200813-23:06:02,685 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.norm".
+200813-23:06:04,334 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.map_brainmask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/map_brainmask".
+200813-23:06:04,588 nipype.workflow INFO:
+	 [Node] Running "map_brainmask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 1 --input /templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_label-brain_probseg.nii.gz --interpolation Gaussian --output tpl-OASIS30ANTs_res-01_label-brain_probseg_trans.nii.gz --reference-image /data/sub-7400/ses-1/anat/sub-7400_run-1_T1w.nii.gz --transform [ /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/norm/anat_to_template0GenericAffine.mat, 1 ] --transform [ /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/norm/anat_to_template1InverseWarp.nii.gz, 0 ]
+200813-23:06:44,749 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.map_brainmask".
+200813-23:06:46,381 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.thr_brainmask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/thr_brainmask".
+200813-23:06:46,433 nipype.workflow INFO:
+	 [Node] Running "thr_brainmask" ("niworkflows.interfaces.ants.ThresholdImage"), a CommandLine Interface with command:
+ThresholdImage 3 /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/map_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans.nii.gz tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled.nii.gz 0.500000 1.000000 1.000000 0.000000
+200813-23:06:48,10 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.thr_brainmask".
+200813-23:06:50,414 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.dil_brainmask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/dil_brainmask".
+200813-23:06:50,414 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.03_pad_mask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/03_pad_mask".
+200813-23:06:50,429 nipype.workflow INFO:
+	 [Node] Running "dil_brainmask" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz MD /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/thr_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled.nii.gz 2
+200813-23:06:50,439 nipype.workflow INFO:
+	 [Node] Running "03_pad_mask" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/thr_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled.nii.gz 10
+200813-23:06:52,6 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.03_pad_mask".
+200813-23:06:52,411 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.dil_brainmask".
+200813-23:06:54,393 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.get_brainmask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/get_brainmask".
+200813-23:06:54,540 nipype.workflow INFO:
+	 [Node] Running "get_brainmask" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths_maths.nii.gz GetLargestComponent /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/dil_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz
+200813-23:06:56,507 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.get_brainmask".
+200813-23:06:57,395 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.01_atropos" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/01_atropos".
+200813-23:06:58,472 nipype.workflow INFO:
+	 [Node] Running "01_atropos" ("nipype.interfaces.ants.segmentation.Atropos"), a CommandLine Interface with command:
+Atropos --image-dimensionality 3 --initialization KMeans[3] --intensity-image /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-7400_run-1_T1w_maths_corrected.nii.gz --likelihood-model Gaussian --mask-image /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/get_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths_maths.nii.gz --mrf [0.1,1x1x1] --convergence [3,0] --output [sub-7400_run-1_T1w_maths_corrected_labeled.nii.gz] --use-random-seed 1
+200813-23:08:06,116 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.01_atropos".
+200813-23:08:08,532 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.02_pad_segm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/02_pad_segm".
+200813-23:08:08,597 nipype.workflow INFO:
+	 [Node] Running "02_pad_segm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_labeled_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/01_atropos/sub-7400_run-1_T1w_maths_corrected_labeled.nii.gz 10
+200813-23:08:10,517 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.02_pad_segm".
+200813-23:08:11,426 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.04_sel_labels" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels".
+200813-23:08:12,794 nipype.workflow INFO:
+	 [Node] Running "04_sel_labels" ("nipype.interfaces.utility.wrappers.Function")
+200813-23:08:13,543 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.04_sel_labels".
+200813-23:08:16,568 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.27_depad_csf" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/27_depad_csf".
+200813-23:08:16,568 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.05_get_wm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/05_get_wm".
+200813-23:08:16,568 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.06_get_gm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/06_get_gm".
+200813-23:08:16,568 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.10_me_csf" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/10_me_csf".
+200813-23:08:16,583 nipype.workflow INFO:
+	 [Node] Running "05_get_wm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-03_maths.nii.gz GetLargestComponent /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-03.nii.gz
+200813-23:08:16,584 nipype.workflow INFO:
+	 [Node] Running "10_me_csf" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-01_maths.nii.gz ME /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-01.nii.gz 10
+200813-23:08:16,633 nipype.workflow INFO:
+	 [Node] Running "27_depad_csf" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-01_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-01.nii.gz -10
+200813-23:08:17,120 nipype.workflow INFO:
+	 [Node] Running "06_get_gm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-02_maths.nii.gz GetLargestComponent /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-02.nii.gz
+200813-23:08:18,128 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.27_depad_csf".
+200813-23:08:18,859 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.05_get_wm".
+200813-23:08:19,519 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.06_get_gm".
+200813-23:08:19,541 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.09_relabel_wm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/09_relabel_wm".
+200813-23:08:20,627 nipype.workflow INFO:
+	 [Node] Running "09_relabel_wm" ("nipype.interfaces.ants.utils.MultiplyImages"), a CommandLine Interface with command:
+MultiplyImages 3 /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/05_get_wm/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-03_maths.nii.gz 3.0 09_relabel_wm.nii.gz
+200813-23:08:22,67 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.09_relabel_wm".
+200813-23:08:22,550 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.07_fill_gm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/07_fill_gm".
+200813-23:08:22,649 nipype.workflow INFO:
+	 [Node] Running "07_fill_gm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-02_maths_maths.nii.gz FillHoles /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/06_get_gm/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-02_maths.nii.gz 2
+200813-23:08:23,121 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.10_me_csf".
+200813-23:08:24,560 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.26_depad_wm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/26_depad_wm".
+200813-23:08:24,590 nipype.workflow INFO:
+	 [Node] Running "26_depad_wm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/09_relabel_wm/09_relabel_wm.nii.gz -10
+200813-23:08:26,158 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.26_depad_wm".
+200813-23:08:33,120 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.07_fill_gm".
+200813-23:08:33,566 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.08_mult_gm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/08_mult_gm".
+200813-23:08:34,683 nipype.workflow INFO:
+	 [Node] Running "08_mult_gm" ("nipype.interfaces.ants.utils.MultiplyImages"), a CommandLine Interface with command:
+MultiplyImages 3 /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/06_get_gm/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-02_maths.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/07_fill_gm/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-02_maths_maths.nii.gz 08_mult_gm.nii.gz
+200813-23:08:36,320 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.08_mult_gm".
+200813-23:08:38,575 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.11_add_gm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/11_add_gm".
+200813-23:08:38,793 nipype.workflow INFO:
+	 [Node] Running "11_add_gm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 08_mult_gm_maths.nii.gz addtozero /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/08_mult_gm/08_mult_gm.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/10_me_csf/sub-7400_run-1_T1w_maths_corrected_labeled_maths_class-01_maths.nii.gz
+200813-23:08:44,467 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.11_add_gm".
+200813-23:08:45,577 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.12_relabel_gm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/12_relabel_gm".
+200813-23:08:46,614 nipype.workflow INFO:
+	 [Node] Running "12_relabel_gm" ("nipype.interfaces.ants.utils.MultiplyImages"), a CommandLine Interface with command:
+MultiplyImages 3 /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/11_add_gm/08_mult_gm_maths.nii.gz 2.0 12_relabel_gm.nii.gz
+200813-23:08:47,855 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.12_relabel_gm".
+200813-23:08:50,621 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.13_add_gm_wm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/13_add_gm_wm".
+200813-23:08:50,621 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.25_depad_gm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/25_depad_gm".
+200813-23:08:50,637 nipype.workflow INFO:
+	 [Node] Running "13_add_gm_wm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths.nii.gz addtozero /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/09_relabel_wm/09_relabel_wm.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/12_relabel_gm/12_relabel_gm.nii.gz
+200813-23:08:50,823 nipype.workflow INFO:
+	 [Node] Running "25_depad_gm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 12_relabel_gm_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/12_relabel_gm/12_relabel_gm.nii.gz -10
+200813-23:08:52,467 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.25_depad_gm".
+200813-23:08:53,486 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.merge_tpms" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/merge_tpms".
+200813-23:08:54,875 nipype.workflow INFO:
+	 [Node] Running "merge_tpms" ("nipype.interfaces.utility.base.Merge")
+200813-23:08:54,888 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.merge_tpms".
+200813-23:08:56,496 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.13_add_gm_wm".
+200813-23:08:57,496 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.14_sel_labels2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/14_sel_labels2".
+200813-23:08:58,631 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.24_depad_segm" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/24_depad_segm".
+200813-23:08:58,652 nipype.workflow INFO:
+	 [Node] Running "24_depad_segm" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/13_add_gm_wm/09_relabel_wm_maths.nii.gz -10
+200813-23:08:58,683 nipype.workflow INFO:
+	 [Node] Running "14_sel_labels2" ("nipype.interfaces.utility.wrappers.Function")
+200813-23:08:59,21 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.14_sel_labels2".
+200813-23:08:59,503 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.15_add_7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/15_add_7".
+200813-23:08:59,618 nipype.workflow INFO:
+	 [Node] Running "15_add_7" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths.nii.gz addtozero /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/14_sel_labels2/09_relabel_wm_maths_class-03.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/14_sel_labels2/09_relabel_wm_maths_class-02.nii.gz
+200813-23:09:00,282 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.24_depad_segm".
+200813-23:09:04,942 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.15_add_7".
+200813-23:09:05,514 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.16_me_7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/16_me_7".
+200813-23:09:05,573 nipype.workflow INFO:
+	 [Node] Running "16_me_7" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths.nii.gz ME /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/15_add_7/09_relabel_wm_maths_class-03_maths.nii.gz 2
+200813-23:09:10,76 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.16_me_7".
+200813-23:09:11,526 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.17_comp_7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/17_comp_7".
+200813-23:09:11,565 nipype.workflow INFO:
+	 [Node] Running "17_comp_7" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths.nii.gz GetLargestComponent /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/16_me_7/09_relabel_wm_maths_class-03_maths_maths.nii.gz
+200813-23:09:13,969 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.17_comp_7".
+200813-23:09:15,533 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.18_md_7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/18_md_7".
+200813-23:09:15,637 nipype.workflow INFO:
+	 [Node] Running "18_md_7" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths.nii.gz MD /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/17_comp_7/09_relabel_wm_maths_class-03_maths_maths_maths.nii.gz 4
+200813-23:09:18,98 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.18_md_7".
+200813-23:09:19,537 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.19_fill_7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/19_fill_7".
+200813-23:09:19,603 nipype.workflow INFO:
+	 [Node] Running "19_fill_7" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths.nii.gz FillHoles /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/18_md_7/09_relabel_wm_maths_class-03_maths_maths_maths_maths.nii.gz 2
+200813-23:09:29,515 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.19_fill_7".
+200813-23:09:31,563 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.20_add_7_2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/20_add_7_2".
+200813-23:09:31,704 nipype.workflow INFO:
+	 [Node] Running "20_add_7_2" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths.nii.gz addtozero /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/19_fill_7/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/03_pad_mask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz
+200813-23:09:37,206 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.20_add_7_2".
+200813-23:09:37,570 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.21_md_7_2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/21_md_7_2".
+200813-23:09:37,876 nipype.workflow INFO:
+	 [Node] Running "21_md_7_2" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths.nii.gz MD /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/20_add_7_2/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths.nii.gz 5
+200813-23:09:40,191 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.21_md_7_2".
+200813-23:09:41,576 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.22_me_7_2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/22_me_7_2".
+200813-23:09:41,606 nipype.workflow INFO:
+	 [Node] Running "22_me_7_2" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths_maths.nii.gz ME /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/21_md_7_2/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths.nii.gz 5
+200813-23:09:46,271 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.22_me_7_2".
+200813-23:09:47,593 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.23_depad_mask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/23_depad_mask".
+200813-23:09:48,378 nipype.workflow INFO:
+	 [Node] Running "23_depad_mask" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths_maths_maths.nii.gz PadImage /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/22_me_7_2/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths_maths.nii.gz -10
+200813-23:09:49,947 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.23_depad_mask".
+200813-23:09:51,591 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.msk_conform" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/msk_conform".
+200813-23:09:51,636 nipype.workflow INFO:
+	 [Node] Running "msk_conform" ("nipype.interfaces.utility.wrappers.Function")
+200813-23:09:51,924 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.msk_conform".
+200813-23:09:57,765 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.inu_n4_final" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4_final".
+200813-23:09:57,789 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n4_final0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4_final/mapflow/_inu_n4_final0".
+200813-23:09:58,38 nipype.workflow INFO:
+	 [Node] Running "_inu_n4_final0" ("nipype.interfaces.ants.segmentation.N4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/sub-7400/ses-1/anat/sub-7400_run-1_T1w.nii.gz --convergence [ 50x50x50x50x50, 1e-07 ] --output [ sub-7400_run-1_T1w_corrected.nii.gz, sub-7400_run-1_T1w_bias.nii.gz ] -r --shrink-factor 4 --weight-image /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/09_relabel_wm_maths_xform.nii.gz
+200813-23:10:36,464 nipype.workflow INFO:
+	 [Node] Finished "_inu_n4_final0".
+200813-23:10:36,826 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.inu_n4_final".
+200813-23:10:37,812 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.apply_mask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/apply_mask".
+200813-23:10:37,922 nipype.workflow INFO:
+	 [Node] Setting-up "_apply_mask0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/apply_mask/mapflow/_apply_mask0".
+200813-23:10:37,934 nipype.workflow INFO:
+	 [Node] Running "_apply_mask0" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/inu_n4_final/mapflow/_inu_n4_final0/sub-7400_run-1_T1w_corrected.nii.gz -mas /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/09_relabel_wm_mask_xform.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/apply_mask/mapflow/_apply_mask0/sub-7400_run-1_T1w_corrected_masked.nii.gz
+200813-23:10:39,962 nipype.workflow INFO:
+	 [Node] Finished "_apply_mask0".
+200813-23:10:39,969 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.apply_mask".
+200813-23:10:48,155 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.trunc_mov" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/trunc_mov".
+200813-23:10:48,161 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.trunc_mov" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/trunc_mov".
+200813-23:10:48,176 nipype.workflow INFO:
+	 [Node] Running "trunc_mov" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_corrected_xform_maths.nii.gz TruncateImageIntensity /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz 0.01 0.999 256
+200813-23:10:48,392 nipype.workflow INFO:
+	 [Node] Running "trunc_mov" ("niworkflows.interfaces.ants.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-7400_run-1_T1w_corrected_xform_maths.nii.gz TruncateImageIntensity /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz 0.01 0.999 256
+200813-23:10:51,639 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.skull_strip_extern" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/skull_strip_extern".
+200813-23:10:51,684 nipype.workflow INFO:
+	 [Node] Running "skull_strip_extern" ("niworkflows.interfaces.freesurfer.FSInjectBrainExtracted")
+200813-23:10:53,722 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.trunc_mov".
+200813-23:10:53,944 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.trunc_mov".
+200813-23:10:54,184 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.skull_strip_extern".
+200813-23:10:55,805 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon2_vol" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon2_vol".
+200813-23:10:55,837 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon2-volonly -openmp 8 -subjid sub-7400 -sd /fsdir 
+200813-23:10:55,839 nipype.workflow INFO:
+	 [Node] Running "autorecon2_vol" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon2-volonly -openmp 8 -subjid sub-7400 -sd /fsdir 
+200813-23:10:55,841 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon2-volonly -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-01:48:28,491 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon2_vol".
+200814-01:48:33,214 nipype.workflow INFO:
+	 [Node] Setting-up "_autorecon_surfs1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon_surfs/mapflow/_autorecon_surfs1".
+200814-01:48:33,221 nipype.workflow INFO:
+	 [Node] Setting-up "_autorecon_surfs0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon_surfs/mapflow/_autorecon_surfs0".
+200814-01:48:33,231 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi rh -noparcstats -noparcstats2 -noparcstats3 -nohyporelabel -nobalabels -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-01:48:33,233 nipype.workflow INFO:
+	 [Node] Running "_autorecon_surfs1" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon-hemi rh -noparcstats -noparcstats2 -noparcstats3 -nohyporelabel -nobalabels -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-01:48:33,235 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi rh -noparcstats -noparcstats2 -noparcstats3 -nohyporelabel -nobalabels -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-01:48:33,238 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi lh -noparcstats -noparcstats2 -noparcstats3 -nohyporelabel -nobalabels -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-01:48:33,257 nipype.workflow INFO:
+	 [Node] Running "_autorecon_surfs0" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon-hemi lh -noparcstats -noparcstats2 -noparcstats3 -nohyporelabel -nobalabels -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-01:48:33,259 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi lh -noparcstats -noparcstats2 -noparcstats3 -nohyporelabel -nobalabels -openmp 8 -subjid sub-7400 -sd /fsdir 
+200814-04:20:25,701 nipype.workflow INFO:
+	 [Node] Finished "_autorecon_surfs1".
+200814-04:33:02,760 nipype.workflow INFO:
+	 [Node] Finished "_autorecon_surfs0".
+200814-04:33:03,969 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon_surfs" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon_surfs".
+200814-04:33:18,98 nipype.workflow INFO:
+	 [Node] Setting-up "_autorecon_surfs0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon_surfs/mapflow/_autorecon_surfs0".
+200814-04:33:20,728 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-04:33:20,730 nipype.workflow INFO:
+	 [Node] Running "_autorecon_surfs0" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+echo recon-all: nothing to do
+200814-04:33:20,734 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-04:33:20,884 nipype.workflow INFO:
+	 [Node] Finished "_autorecon_surfs0".
+200814-04:33:20,888 nipype.workflow INFO:
+	 [Node] Setting-up "_autorecon_surfs1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon_surfs/mapflow/_autorecon_surfs1".
+200814-04:33:23,437 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-04:33:23,439 nipype.workflow INFO:
+	 [Node] Running "_autorecon_surfs1" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+echo recon-all: nothing to do
+200814-04:33:23,442 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-04:33:23,573 nipype.workflow INFO:
+	 [Node] Finished "_autorecon_surfs1".
+200814-04:33:23,910 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon_surfs".
+200814-04:33:25,991 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.cortribbon" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/cortribbon".
+200814-04:33:26,390 nipype.interface INFO:
+	 resume recon-all : recon-all -parallel -subjid sub-7400 -sd /fsdir -T2pial -cortribbon
+200814-04:33:26,392 nipype.workflow INFO:
+	 [Node] Running "cortribbon" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -parallel -subjid sub-7400 -sd /fsdir -T2pial -cortribbon
+200814-04:33:26,394 nipype.interface INFO:
+	 resume recon-all : recon-all -parallel -subjid sub-7400 -sd /fsdir -T2pial -cortribbon
+200814-05:21:40,410 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.cortribbon".
+200814-05:21:44,211 nipype.workflow INFO:
+	 [Node] Setting-up "_parcstats0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/parcstats/mapflow/_parcstats0".
+200814-05:21:44,212 nipype.workflow INFO:
+	 [Node] Setting-up "_parcstats1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/parcstats/mapflow/_parcstats1".
+200814-05:21:44,226 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi rh -nohyporelabel -openmp 8 -subjid sub-7400 -sd /fsdir -notessellate -nosmooth1 -noinflate1 -noqsphere -nofix -nowhite -nosmooth2 -noinflate2 -nocurvHK -nocurvstats -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -nocortparc2 -nocortparc3 -nopctsurfcon
+200814-05:21:44,228 nipype.workflow INFO:
+	 [Node] Running "_parcstats1" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon-hemi rh -nohyporelabel -openmp 8 -subjid sub-7400 -sd /fsdir -notessellate -nosmooth1 -noinflate1 -noqsphere -nofix -nowhite -nosmooth2 -noinflate2 -nocurvHK -nocurvstats -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -nocortparc2 -nocortparc3 -nopctsurfcon
+200814-05:21:44,232 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi rh -nohyporelabel -openmp 8 -subjid sub-7400 -sd /fsdir -notessellate -nosmooth1 -noinflate1 -noqsphere -nofix -nowhite -nosmooth2 -noinflate2 -nocurvHK -nocurvstats -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -nocortparc2 -nocortparc3 -nopctsurfcon
+200814-05:21:59,623 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi lh -nohyporelabel -openmp 8 -subjid sub-7400 -sd /fsdir -notessellate -nosmooth1 -noinflate1 -noqsphere -nofix -nowhite -nosmooth2 -noinflate2 -nocurvHK -nocurvstats -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -nocortparc2 -nocortparc3 -nopctsurfcon
+200814-05:21:59,626 nipype.workflow INFO:
+	 [Node] Running "_parcstats0" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon-hemi lh -nohyporelabel -openmp 8 -subjid sub-7400 -sd /fsdir -notessellate -nosmooth1 -noinflate1 -noqsphere -nofix -nowhite -nosmooth2 -noinflate2 -nocurvHK -nocurvstats -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -nocortparc2 -nocortparc3 -nopctsurfcon
+200814-05:21:59,630 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon-hemi lh -nohyporelabel -openmp 8 -subjid sub-7400 -sd /fsdir -notessellate -nosmooth1 -noinflate1 -noqsphere -nofix -nowhite -nosmooth2 -noinflate2 -nocurvHK -nocurvstats -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -nocortparc2 -nocortparc3 -nopctsurfcon
+200814-05:41:43,347 nipype.workflow INFO:
+	 [Node] Finished "_parcstats0".
+200814-05:42:13,177 nipype.workflow INFO:
+	 [Node] Finished "_parcstats1".
+200814-05:42:14,157 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.parcstats" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/parcstats".
+200814-05:42:35,364 nipype.workflow INFO:
+	 [Node] Setting-up "_parcstats0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/parcstats/mapflow/_parcstats0".
+200814-05:42:35,416 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-05:42:35,418 nipype.workflow INFO:
+	 [Node] Running "_parcstats0" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+echo recon-all: nothing to do
+200814-05:42:35,423 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-05:42:37,191 nipype.workflow INFO:
+	 [Node] Finished "_parcstats0".
+200814-05:42:37,195 nipype.workflow INFO:
+	 [Node] Setting-up "_parcstats1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/parcstats/mapflow/_parcstats1".
+200814-05:42:37,432 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-05:42:37,434 nipype.workflow INFO:
+	 [Node] Running "_parcstats1" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+echo recon-all: nothing to do
+200814-05:42:37,439 nipype.interface INFO:
+	 recon-all complete : Not running
+200814-05:42:37,572 nipype.workflow INFO:
+	 [Node] Finished "_parcstats1".
+200814-05:42:37,581 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.parcstats".
+200814-05:42:38,191 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon3" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/autorecon_resume_wf/autorecon3".
+200814-05:42:38,210 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon3 -openmp 8 -subjid sub-7400 -sd /fsdir -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -noparcstats -nocortparc2 -noparcstats2 -nocortparc3 -noparcstats3 -nopctsurfcon -nocortribbon -nobalabels
+200814-05:42:38,211 nipype.workflow INFO:
+	 [Node] Running "autorecon3" ("smriprep.interfaces.freesurfer.ReconAll"), a CommandLine Interface with command:
+recon-all -autorecon3 -openmp 8 -subjid sub-7400 -sd /fsdir -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -noparcstats -nocortparc2 -noparcstats2 -nocortparc3 -noparcstats3 -nopctsurfcon -nocortribbon -nobalabels
+200814-05:42:38,218 nipype.interface INFO:
+	 resume recon-all : recon-all -autorecon3 -openmp 8 -subjid sub-7400 -sd /fsdir -nosphere -nosurfreg -nojacobian_white -noavgcurv -nocortparc -nopial -noparcstats -nocortparc2 -noparcstats2 -nocortparc3 -noparcstats3 -nopctsurfcon -nocortribbon -nobalabels
+200814-06:02:36,793 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon3".
+200814-06:02:37,988 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.fs_datasource" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/fs_datasource".
+200814-06:02:37,989 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.fs_datasource" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/fs_datasource".
+200814-06:02:37,989 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.get_surfaces" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/get_surfaces".
+200814-06:02:38,146 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.recon_report" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_reports_wf/recon_report".
+200814-06:02:38,161 nipype.workflow INFO:
+	 [Node] Running "fs_datasource" ("nipype.interfaces.io.FreeSurferSource")
+200814-06:02:38,161 nipype.workflow INFO:
+	 [Node] Running "fs_datasource" ("nipype.interfaces.io.FreeSurferSource")
+200814-06:02:38,161 nipype.workflow INFO:
+	 [Node] Running "get_surfaces" ("nipype.interfaces.io.FreeSurferSource")
+200814-06:02:38,163 nipype.workflow INFO:
+	 [Node] Running "recon_report" ("smriprep.interfaces.reports.FSSurfaceReport")
+200814-06:02:38,198 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.fs_datasource".
+200814-06:02:38,198 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.get_surfaces".
+200814-06:02:38,225 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.fs_datasource".
+200814-06:02:39,993 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.tonative" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/tonative".
+200814-06:02:39,994 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.tonative" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/tonative".
+200814-06:02:40,9 nipype.workflow INFO:
+	 [Node] Running "tonative" ("nipype.interfaces.freesurfer.model.Label2Vol"), a CommandLine Interface with command:
+mri_label2vol --regheader /fsdir/sub-7400/mri/aseg.mgz --seg /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/tonative/aparc+aseg.mgz --temp /fsdir/sub-7400/mri/rawavg.mgz --o /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/tonative/aparc+aseg_vol.nii.gz
+200814-06:02:40,12 nipype.workflow INFO:
+	 [Node] Running "tonative" ("nipype.interfaces.freesurfer.model.Label2Vol"), a CommandLine Interface with command:
+mri_label2vol --regheader /fsdir/sub-7400/mri/aseg.mgz --seg /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/tonative/aseg.mgz --temp /fsdir/sub-7400/mri/rawavg.mgz --o /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/tonative/aseg_vol.nii.gz
+200814-06:02:42,69 nipype.workflow INFO:
+	 [Node] Setting-up "_midthickness1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness1".
+200814-06:02:42,76 nipype.workflow INFO:
+	 [Node] Setting-up "_midthickness0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness0".
+200814-06:02:42,87 nipype.workflow INFO:
+	 [Node] Running "_midthickness1" ("niworkflows.interfaces.freesurfer.MakeMidthickness"), a CommandLine Interface with command:
+mris_expand -pial /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness1/rh.pial -thickness -thickness_name /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness1/rh.thickness /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness1/rh.smoothwm 0.5 midthickness
+200814-06:02:42,92 nipype.workflow INFO:
+	 [Node] Running "_midthickness0" ("niworkflows.interfaces.freesurfer.MakeMidthickness"), a CommandLine Interface with command:
+mris_expand -pial /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness0/lh.pial -thickness -thickness_name /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness0/lh.thickness /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness0/lh.smoothwm 0.5 midthickness
+200814-06:02:48,429 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.tonative".
+200814-06:02:49,784 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.tonative".
+200814-06:02:50,3 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.tonii" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/tonii".
+200814-06:02:50,5 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.tonii" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/tonii".
+200814-06:02:50,423 nipype.workflow INFO:
+	 [Node] Running "tonii" ("nipype.interfaces.freesurfer.preprocess.MRIConvert"), a CommandLine Interface with command:
+mri_convert --out_type nii --resample_type nearest --reslice_like /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz --input_volume /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/tonative/aseg_vol.nii.gz --output_volume /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aseg/tonii/aseg_vol_out.nii.gz
+200814-06:02:50,424 nipype.workflow INFO:
+	 [Node] Running "tonii" ("nipype.interfaces.freesurfer.preprocess.MRIConvert"), a CommandLine Interface with command:
+mri_convert --out_type nii --resample_type nearest --reslice_like /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz --input_volume /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/tonative/aparc+aseg_vol.nii.gz --output_volume /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/segs_to_native_aparc_aseg/tonii/aparc+aseg_vol_out.nii.gz
+200814-06:02:52,98 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.tonii".
+200814-06:02:52,459 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.tonii".
+200814-06:02:52,568 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.recon_report".
+200814-06:02:57,932 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_desc-aparcaseg_dseg.nii.gz dtype from float32 to int16
+200814-06:03:10,409 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_desc-aseg_dseg.nii.gz dtype from float32 to int16
+200814-06:03:11,159 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.lut_t1w_dseg" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/lut_t1w_dseg".
+200814-06:03:11,182 nipype.workflow INFO:
+	 [Node] Running "lut_t1w_dseg" ("nipype.interfaces.utility.wrappers.Function")
+200814-06:03:11,336 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.refine" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/refine".
+200814-06:03:11,544 nipype.workflow INFO:
+	 [Node] Running "refine" ("niworkflows.interfaces.freesurfer.RefineBrainMask")
+200814-06:03:11,684 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.lut_t1w_dseg".
+200814-06:03:15,600 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.split_seg" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg".
+200814-06:03:15,612 nipype.workflow INFO:
+	 [Node] Running "split_seg" ("nipype.interfaces.utility.wrappers.Function")
+200814-06:03:15,882 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.split_seg".
+200814-06:03:19,451 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_label-GM_probseg.nii.gz dtype from uint8 to float32
+200814-06:03:20,775 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_label-WM_probseg.nii.gz dtype from uint8 to float32
+200814-06:03:21,316 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_label-CSF_probseg.nii.gz dtype from uint8 to float32
+200814-06:04:04,870 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.refine".
+200814-06:04:05,892 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.registration" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration".
+200814-06:04:05,893 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.registration" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration".
+200814-06:04:06,285 nipype.workflow INFO:
+	 [Node] Running "registration" ("niworkflows.interfaces.mni.RobustMNINormalization")
+200814-06:04:06,875 nipype.workflow INFO:
+	 [Node] Running "registration" ("niworkflows.interfaces.mni.RobustMNINormalization")
+200814-06:04:07,672 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.seg_rpt" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_reports_wf/seg_rpt".
+200814-06:04:07,673 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.applyrefined" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/applyrefined".
+200814-06:04:07,759 nipype.workflow INFO:
+	 [Node] Running "applyrefined" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz -mas /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/refine/sub-7400_run-1_T1w_corrected_xform_rbrainmask.nii.gz /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/applyrefined/sub-7400_run-1_T1w_corrected_xform_masked.nii.gz
+200814-06:04:07,768 nipype.workflow INFO:
+	 [Node] Running "seg_rpt" ("niworkflows.interfaces.masks.ROIsPlot")
+200814-06:04:12,654 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.applyrefined".
+200814-06:04:16,613 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.seg_rpt".
+200814-06:30:18,649 nipype.workflow INFO:
+	 [Node] Finished "_midthickness1".
+200814-06:30:42,278 nipype.workflow INFO:
+	 [Node] Finished "_midthickness0".
+200814-06:30:42,914 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.midthickness" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness".
+200814-06:30:43,563 nipype.workflow INFO:
+	 [Node] Setting-up "_midthickness0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness0".
+200814-06:30:43,616 nipype.workflow INFO:
+	 [Node] Cached "_midthickness0" - collecting precomputed outputs
+200814-06:30:43,617 nipype.workflow INFO:
+	 [Node] "_midthickness0" found cached.
+200814-06:30:43,626 nipype.workflow INFO:
+	 [Node] Setting-up "_midthickness1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/midthickness/mapflow/_midthickness1".
+200814-06:30:43,681 nipype.workflow INFO:
+	 [Node] Cached "_midthickness1" - collecting precomputed outputs
+200814-06:30:43,681 nipype.workflow INFO:
+	 [Node] "_midthickness1" found cached.
+200814-06:30:43,935 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.midthickness".
+200814-06:30:44,809 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.save_midthickness" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/save_midthickness".
+200814-06:30:45,858 nipype.workflow INFO:
+	 [Node] Running "save_midthickness" ("nipype.interfaces.io.DataSink")
+200814-06:30:46,729 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.save_midthickness".
+200814-06:30:52,849 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii0".
+200814-06:30:52,866 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii1".
+200814-06:30:52,869 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii2".
+200814-06:30:52,869 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii3" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii3".
+200814-06:30:52,871 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii4" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii4".
+200814-06:30:52,871 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii5" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii5".
+200814-06:30:52,938 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii6" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii6".
+200814-06:30:52,975 nipype.workflow INFO:
+	 [Node] Running "_fs2gii1" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/rh.smoothwm /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii1/rh.smoothwm_converted.gii
+200814-06:30:53,28 nipype.workflow INFO:
+	 [Node] Running "_fs2gii4" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/lh.inflated /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii4/lh.inflated_converted.gii
+200814-06:30:53,70 nipype.workflow INFO:
+	 [Node] Running "_fs2gii2" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/lh.pial /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii2/lh.pial_converted.gii
+200814-06:30:53,125 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii7".
+200814-06:30:53,295 nipype.workflow INFO:
+	 [Node] Running "_fs2gii0" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/lh.smoothwm /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii0/lh.smoothwm_converted.gii
+200814-06:30:53,393 nipype.workflow INFO:
+	 [Node] Running "_fs2gii3" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/rh.pial /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii3/rh.pial_converted.gii
+200814-06:30:53,444 nipype.workflow INFO:
+	 [Node] Running "_fs2gii5" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/rh.inflated /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii5/rh.inflated_converted.gii
+200814-06:30:53,495 nipype.workflow INFO:
+	 [Node] Running "_fs2gii6" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/lh.midthickness /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii6/lh.midthickness_converted.gii
+200814-06:30:53,552 nipype.workflow INFO:
+	 [Node] Running "_fs2gii7" ("nipype.interfaces.freesurfer.utils.MRIsConvert"), a CommandLine Interface with command:
+mris_convert /fsdir/sub-7400/surf/rh.midthickness /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii7/rh.midthickness_converted.gii
+200814-06:30:58,537 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii6".
+200814-06:30:58,688 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii5".
+200814-06:30:58,734 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii2".
+200814-06:30:58,867 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii4".
+200814-06:30:58,977 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii0".
+200814-06:30:59,287 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii1".
+200814-06:30:59,298 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii7".
+200814-06:30:59,447 nipype.workflow INFO:
+	 [Node] Finished "_fs2gii3".
+200814-06:31:00,857 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii".
+200814-06:31:00,873 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii0".
+200814-06:31:00,927 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii0" - collecting precomputed outputs
+200814-06:31:00,928 nipype.workflow INFO:
+	 [Node] "_fs2gii0" found cached.
+200814-06:31:00,937 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii1".
+200814-06:31:00,992 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii1" - collecting precomputed outputs
+200814-06:31:00,993 nipype.workflow INFO:
+	 [Node] "_fs2gii1" found cached.
+200814-06:31:01,2 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii2".
+200814-06:31:01,57 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii2" - collecting precomputed outputs
+200814-06:31:01,58 nipype.workflow INFO:
+	 [Node] "_fs2gii2" found cached.
+200814-06:31:01,67 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii3" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii3".
+200814-06:31:01,122 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii3" - collecting precomputed outputs
+200814-06:31:01,123 nipype.workflow INFO:
+	 [Node] "_fs2gii3" found cached.
+200814-06:31:01,132 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii4" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii4".
+200814-06:31:01,187 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii4" - collecting precomputed outputs
+200814-06:31:01,188 nipype.workflow INFO:
+	 [Node] "_fs2gii4" found cached.
+200814-06:31:01,198 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii5" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii5".
+200814-06:31:01,252 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii5" - collecting precomputed outputs
+200814-06:31:01,253 nipype.workflow INFO:
+	 [Node] "_fs2gii5" found cached.
+200814-06:31:01,263 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii6" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii6".
+200814-06:31:01,317 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii6" - collecting precomputed outputs
+200814-06:31:01,318 nipype.workflow INFO:
+	 [Node] "_fs2gii6" found cached.
+200814-06:31:01,327 nipype.workflow INFO:
+	 [Node] Setting-up "_fs2gii7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fs2gii/mapflow/_fs2gii7".
+200814-06:31:01,382 nipype.workflow INFO:
+	 [Node] Cached "_fs2gii7" - collecting precomputed outputs
+200814-06:31:01,383 nipype.workflow INFO:
+	 [Node] "_fs2gii7" found cached.
+200814-06:31:01,600 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii".
+200814-06:31:04,876 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs2".
+200814-06:31:04,877 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs1".
+200814-06:31:04,877 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs0".
+200814-06:31:04,877 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs3" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs3".
+200814-06:31:04,878 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs4" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs4".
+200814-06:31:04,879 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs5" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs5".
+200814-06:31:04,887 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs7".
+200814-06:31:04,887 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs6" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs6".
+200814-06:31:05,120 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs3" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,125 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs5" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,303 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs1" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,345 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs0" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,348 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs2" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,470 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs6" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,601 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs7" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:05,667 nipype.workflow INFO:
+	 [Node] Running "_fix_surfs4" ("niworkflows.interfaces.surf.NormalizeSurf")
+200814-06:31:06,952 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs3".
+200814-06:31:07,110 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs1".
+200814-06:31:07,124 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs5".
+200814-06:31:07,233 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs2".
+200814-06:31:07,500 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs4".
+200814-06:31:07,558 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs0".
+200814-06:31:07,703 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs6".
+200814-06:31:07,736 nipype.workflow INFO:
+	 [Node] Finished "_fix_surfs7".
+200814-06:31:08,893 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs".
+200814-06:31:09,244 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs0".
+200814-06:31:09,299 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs0" - collecting precomputed outputs
+200814-06:31:09,300 nipype.workflow INFO:
+	 [Node] "_fix_surfs0" found cached.
+200814-06:31:09,309 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs1".
+200814-06:31:09,362 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs1" - collecting precomputed outputs
+200814-06:31:09,362 nipype.workflow INFO:
+	 [Node] "_fix_surfs1" found cached.
+200814-06:31:09,373 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs2".
+200814-06:31:09,427 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs2" - collecting precomputed outputs
+200814-06:31:09,427 nipype.workflow INFO:
+	 [Node] "_fix_surfs2" found cached.
+200814-06:31:09,437 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs3" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs3".
+200814-06:31:09,492 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs3" - collecting precomputed outputs
+200814-06:31:09,493 nipype.workflow INFO:
+	 [Node] "_fix_surfs3" found cached.
+200814-06:31:09,502 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs4" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs4".
+200814-06:31:09,557 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs4" - collecting precomputed outputs
+200814-06:31:09,557 nipype.workflow INFO:
+	 [Node] "_fix_surfs4" found cached.
+200814-06:31:09,568 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs5" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs5".
+200814-06:31:09,622 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs5" - collecting precomputed outputs
+200814-06:31:09,622 nipype.workflow INFO:
+	 [Node] "_fix_surfs5" found cached.
+200814-06:31:09,632 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs6" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs6".
+200814-06:31:09,686 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs6" - collecting precomputed outputs
+200814-06:31:09,686 nipype.workflow INFO:
+	 [Node] "_fix_surfs6" found cached.
+200814-06:31:09,696 nipype.workflow INFO:
+	 [Node] Setting-up "_fix_surfs7" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/gifti_surface_wf/fix_surfs/mapflow/_fix_surfs7".
+200814-06:31:09,746 nipype.workflow INFO:
+	 [Node] Cached "_fix_surfs7" - collecting precomputed outputs
+200814-06:31:09,747 nipype.workflow INFO:
+	 [Node] "_fix_surfs7" found cached.
+200814-06:31:09,966 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs".
+200814-07:13:07,837 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.registration".
+200814-07:13:11,285 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_dseg" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_dseg".
+200814-07:13:11,285 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_mask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_mask".
+200814-07:13:11,288 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.tpl_moving" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/tpl_moving".
+200814-07:13:11,309 nipype.workflow INFO:
+	 [Node] Running "tpl_moving" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz --interpolation LanczosWindowedSinc --output sub-7400_run-1_T1w_corrected_xform_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration/ants_t1_to_mniComposite.h5
+200814-07:13:11,335 nipype.workflow INFO:
+	 [Node] Running "std_dseg" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/lut_t1w_dseg/aseg_vol_out_dseg.nii.gz --interpolation MultiLabel --output aseg_vol_out_dseg_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration/ants_t1_to_mniComposite.h5
+200814-07:13:11,393 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms/mapflow/_std_tpms0".
+200814-07:13:11,394 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms/mapflow/_std_tpms1".
+200814-07:13:11,395 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms/mapflow/_std_tpms2".
+200814-07:13:25,33 nipype.workflow INFO:
+	 [Node] Running "_std_tpms0" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg/aseg_label-GM_mask.nii.gz --interpolation Gaussian --output aseg_label-GM_mask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration/ants_t1_to_mniComposite.h5
+200814-07:13:25,230 nipype.workflow INFO:
+	 [Node] Running "_std_tpms2" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg/aseg_label-CSF_mask.nii.gz --interpolation Gaussian --output aseg_label-CSF_mask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration/ants_t1_to_mniComposite.h5
+200814-07:13:25,257 nipype.workflow INFO:
+	 [Node] Running "std_mask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/refine/sub-7400_run-1_T1w_corrected_xform_rbrainmask.nii.gz --interpolation MultiLabel --output sub-7400_run-1_T1w_corrected_xform_rbrainmask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration/ants_t1_to_mniComposite.h5
+200814-07:13:25,303 nipype.workflow INFO:
+	 [Node] Running "_std_tpms1" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg/aseg_label-WM_mask.nii.gz --interpolation Gaussian --output aseg_label-WM_mask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/registration/ants_t1_to_mniComposite.h5
+200814-07:15:54,802 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms2".
+200814-07:17:19,292 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_dseg".
+200814-07:17:19,293 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_mask".
+200814-07:17:19,293 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms1".
+200814-07:17:19,295 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms0".
+200814-07:17:19,295 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.tpl_moving".
+200814-07:17:19,751 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms".
+200814-07:17:24,154 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms/mapflow/_std_tpms0".
+200814-07:17:24,159 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms0" - collecting precomputed outputs
+200814-07:17:24,159 nipype.workflow INFO:
+	 [Node] "_std_tpms0" found cached.
+200814-07:17:24,161 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms/mapflow/_std_tpms1".
+200814-07:17:24,165 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms1" - collecting precomputed outputs
+200814-07:17:24,165 nipype.workflow INFO:
+	 [Node] "_std_tpms1" found cached.
+200814-07:17:24,167 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin6Asym/std_tpms/mapflow/_std_tpms2".
+200814-07:17:24,170 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms2" - collecting precomputed outputs
+200814-07:17:24,171 nipype.workflow INFO:
+	 [Node] "_std_tpms2" found cached.
+200814-07:17:42,320 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms".
+200814-07:17:44,800 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_space-MNI152NLin6Asym_dseg.nii.gz dtype from float64 to int16
+200814-07:17:45,341 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.registration".
+200814-07:17:46,381 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+200814-07:18:41,275 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_msk" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_reports_wf/_template_MNI152NLin6Asym/norm_msk".
+200814-07:18:41,607 nipype.workflow INFO:
+	 [Node] Running "norm_msk" ("nipype.interfaces.utility.wrappers.Function")
+200814-07:18:43,177 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_dseg" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_dseg".
+200814-07:18:43,178 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_mask" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_mask".
+200814-07:18:43,179 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.tpl_moving" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/tpl_moving".
+200814-07:18:43,196 nipype.workflow INFO:
+	 [Node] Running "tpl_moving" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/brain_extraction_wf/copy_xform/sub-7400_run-1_T1w_corrected_xform.nii.gz --interpolation LanczosWindowedSinc --output sub-7400_run-1_T1w_corrected_xform_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+200814-07:18:43,366 nipype.workflow INFO:
+	 [Node] Running "std_dseg" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/lut_t1w_dseg/aseg_vol_out_dseg.nii.gz --interpolation MultiLabel --output aseg_vol_out_dseg_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+200814-07:18:43,401 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_msk".
+200814-07:18:43,438 nipype.workflow INFO:
+	 [Node] Running "std_mask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/surface_recon_wf/refine/sub-7400_run-1_T1w_corrected_xform_rbrainmask.nii.gz --interpolation MultiLabel --output sub-7400_run-1_T1w_corrected_xform_rbrainmask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+200814-07:18:46,752 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_rpt" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_reports_wf/_template_MNI152NLin6Asym/norm_rpt".
+200814-07:18:46,755 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms0".
+200814-07:18:46,756 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms1".
+200814-07:18:46,757 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms2".
+200814-07:18:46,771 nipype.workflow INFO:
+	 [Node] Running "_std_tpms2" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg/aseg_label-CSF_mask.nii.gz --interpolation Gaussian --output aseg_label-CSF_mask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+200814-07:18:46,921 nipype.workflow INFO:
+	 [Node] Running "norm_rpt" ("niworkflows.interfaces.registration.SimpleBeforeAfterRPT")
+200814-07:18:47,203 nipype.workflow INFO:
+	 [Node] Running "_std_tpms0" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg/aseg_label-GM_mask.nii.gz --interpolation Gaussian --output aseg_label-GM_mask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+200814-07:18:47,307 nipype.workflow INFO:
+	 [Node] Running "_std_tpms1" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/split_seg/aseg_label-WM_mask.nii.gz --interpolation Gaussian --output aseg_label-WM_mask_trans.nii.gz --reference-image /templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+200814-07:19:25,250 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_rpt".
+200814-07:19:41,273 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms2".
+200814-07:19:41,278 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms1".
+200814-07:19:41,284 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms0".
+200814-07:20:40,520 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.tpl_moving".
+200814-07:20:40,810 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms".
+200814-07:20:40,825 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms0" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms0".
+200814-07:20:40,828 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms0" - collecting precomputed outputs
+200814-07:20:40,829 nipype.workflow INFO:
+	 [Node] "_std_tpms0" found cached.
+200814-07:20:40,831 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms1" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms1".
+200814-07:20:40,835 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms1" - collecting precomputed outputs
+200814-07:20:40,835 nipype.workflow INFO:
+	 [Node] "_std_tpms1" found cached.
+200814-07:20:40,837 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms2" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms2".
+200814-07:20:40,841 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms2" - collecting precomputed outputs
+200814-07:20:40,841 nipype.workflow INFO:
+	 [Node] "_std_tpms2" found cached.
+200814-07:20:40,851 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms".
+200814-07:20:52,608 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_mask".
+200814-07:20:54,987 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz dtype from float64 to uint8
+200814-07:20:55,444 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_msk" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_reports_wf/_template_MNI152NLin2009cAsym/norm_msk".
+200814-07:20:55,823 nipype.workflow INFO:
+	 [Node] Running "norm_msk" ("nipype.interfaces.utility.wrappers.Function")
+200814-07:20:57,804 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_msk".
+200814-07:20:59,741 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_rpt" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_reports_wf/_template_MNI152NLin2009cAsym/norm_rpt".
+200814-07:21:05,217 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_dseg".
+200814-07:21:05,220 nipype.workflow INFO:
+	 [Node] Running "norm_rpt" ("niworkflows.interfaces.registration.SimpleBeforeAfterRPT")
+200814-07:21:08,641 nipype.interface WARNING:
+	 Changing /output/fmriprep/sub-7400/anat/sub-7400_space-MNI152NLin2009cAsym_dseg.nii.gz dtype from float64 to int16
+200814-07:21:09,247 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.outputnode" in "/work/fmriprep_wf/single_subject_7400_wf/anat_preproc_wf/anat_norm_wf/outputnode".
+200814-07:21:09,625 nipype.workflow INFO:
+	 [Node] Running "outputnode" ("nipype.interfaces.utility.base.IdentityInterface")
+200814-07:21:09,637 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.outputnode".
+200814-07:21:16,360 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_rpt".
+200814-07:21:19,562 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.bidssrc" (mapflow 1/1).
+200814-07:21:19,639 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.bids_info" (mapflow 1/1).
+200814-07:21:22,789 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.lut_t1w_dseg" (mapflow 1/1).
+200814-07:21:22,938 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.applyrefined" (mapflow 1/1).
+200814-07:21:22,939 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.split_seg" (mapflow 1/1).
+200814-07:21:23,99 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.t1w_ref_dimensions" (mapflow 1/1).
+200814-07:21:23,199 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.t1w_conform" (mapflow 1/1).
+200814-07:21:23,290 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_template_wf.get1st" (mapflow 1/1).
+200814-07:21:23,372 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.truncate_images" (mapflow 1/1).
+200814-07:21:23,557 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.inu_n4_final" (mapflow 1/1).
+200814-07:21:23,767 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.init_aff" (mapflow 1/1).
+200814-07:21:24,712 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.norm" (mapflow 1/1).
+200814-07:21:24,884 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.map_brainmask" (mapflow 1/1).
+200814-07:21:24,948 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.inu_n4" (mapflow 1/1).
+200814-07:21:25,143 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.res_target" (mapflow 1/1).
+200814-07:21:25,928 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.res_tmpl" (mapflow 1/1).
+200814-07:21:26,306 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.thr_brainmask" (mapflow 1/1).
+200814-07:21:26,906 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.dil_brainmask" (mapflow 1/1).
+200814-07:21:28,186 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.get_brainmask" (mapflow 1/1).
+200814-07:21:28,499 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.apply_mask" (mapflow 1/1).
+200814-07:21:29,185 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.lap_target" (mapflow 1/1).
+200814-07:21:29,425 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.lap_tmpl" (mapflow 1/1).
+200814-07:21:30,396 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.mrg_tmpl" (mapflow 1/1).
+200814-07:21:30,577 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.mrg_target" (mapflow 1/1).
+200814-07:21:31,223 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.03_pad_mask" (mapflow 1/1).
+200814-07:21:32,727 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.01_atropos" (mapflow 1/1).
+200814-07:21:32,949 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.msk_conform" (mapflow 1/1).
+200814-07:21:33,797 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.02_pad_segm" (mapflow 1/1).
+200814-07:21:34,235 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.04_sel_labels" (mapflow 1/1).
+200814-07:21:34,875 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.05_get_wm" (mapflow 1/1).
+200814-07:21:35,220 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.06_get_gm" (mapflow 1/1).
+200814-07:21:35,411 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.07_fill_gm" (mapflow 1/1).
+200814-07:21:35,635 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.08_mult_gm" (mapflow 1/1).
+200814-07:21:35,962 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.09_relabel_wm" (mapflow 1/1).
+200814-07:21:36,38 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.10_me_csf" (mapflow 1/1).
+200814-07:21:36,744 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.11_add_gm" (mapflow 1/1).
+200814-07:21:37,609 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.12_relabel_gm" (mapflow 1/1).
+200814-07:21:37,964 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.13_add_gm_wm" (mapflow 1/1).
+200814-07:21:38,307 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.14_sel_labels2" (mapflow 1/1).
+200814-07:21:38,688 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.15_add_7" (mapflow 1/1).
+200814-07:21:39,599 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.16_me_7" (mapflow 1/1).
+200814-07:21:39,809 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.17_comp_7" (mapflow 1/1).
+200814-07:21:40,81 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.18_md_7" (mapflow 1/1).
+200814-07:21:40,423 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.19_fill_7" (mapflow 1/1).
+200814-07:21:40,669 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.20_add_7_2" (mapflow 1/1).
+200814-07:21:40,876 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.21_md_7_2" (mapflow 1/1).
+200814-07:21:41,189 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.22_me_7_2" (mapflow 1/1).
+200814-07:21:41,607 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.23_depad_mask" (mapflow 1/1).
+200814-07:21:41,778 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.24_depad_segm" (mapflow 1/1).
+200814-07:21:41,912 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.26_depad_wm" (mapflow 1/1).
+200814-07:21:42,76 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.25_depad_gm" (mapflow 1/1).
+200814-07:21:42,227 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.27_depad_csf" (mapflow 1/1).
+200814-07:21:42,334 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.merge_tpms" (mapflow 1/1).
+200814-07:21:42,413 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.recon_config" (mapflow 1/1).
+200814-07:21:42,622 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon1" (mapflow 1/1).
+200814-07:21:42,786 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.skull_strip_extern" (mapflow 1/1).
+200814-07:21:42,879 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.fov_check" (mapflow 1/1).
+200814-07:21:42,881 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.fsnative2t1w_xfm" (mapflow 1/1).
+200814-07:21:43,109 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.t1w2fsnative_xfm" (mapflow 1/1).
+200814-07:21:43,111 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.refine" (mapflow 1/1).
+200814-07:21:43,330 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.cortribbon" (mapflow 1/1).
+200814-07:21:43,517 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon2_vol" (mapflow 1/1).
+200814-07:21:43,965 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon_surfs" (mapflow 1/2).
+200814-07:21:43,966 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon_surfs" (mapflow 2/2).
+200814-07:21:44,102 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.parcstats" (mapflow 1/2).
+200814-07:21:44,103 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.parcstats" (mapflow 2/2).
+200814-07:21:44,106 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.autorecon_resume_wf.autorecon3" (mapflow 1/1).
+200814-07:21:44,614 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.fs_datasource" (mapflow 1/1).
+200814-07:21:44,836 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.tonii" (mapflow 1/1).
+200814-07:21:44,857 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aparc_aseg.tonative" (mapflow 1/1).
+200814-07:21:44,969 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.fs_datasource" (mapflow 1/1).
+200814-07:21:45,56 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.tonii" (mapflow 1/1).
+200814-07:21:45,250 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.segs_to_native_aseg.tonative" (mapflow 1/1).
+200814-07:21:45,254 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.get_surfaces" (mapflow 1/1).
+200814-07:21:45,256 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.save_midthickness" (mapflow 1/1).
+200814-07:21:45,258 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.midthickness" (mapflow 1/2).
+200814-07:21:45,259 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.midthickness" (mapflow 2/2).
+200814-07:21:45,262 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 1/8).
+200814-07:21:45,262 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 2/8).
+200814-07:21:45,262 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 3/8).
+200814-07:21:45,263 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 4/8).
+200814-07:21:45,263 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 5/8).
+200814-07:21:45,263 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 6/8).
+200814-07:21:45,264 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 7/8).
+200814-07:21:45,264 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fs2gii" (mapflow 8/8).
+200814-07:21:45,266 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 1/8).
+200814-07:21:45,266 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 2/8).
+200814-07:21:45,266 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 3/8).
+200814-07:21:45,267 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 4/8).
+200814-07:21:45,267 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 5/8).
+200814-07:21:45,267 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 6/8).
+200814-07:21:45,268 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 7/8).
+200814-07:21:45,268 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.surface_recon_wf.gifti_surface_wf.fix_surfs" (mapflow 8/8).
+200814-07:21:45,270 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.outputnode" (mapflow 1/1).
+200814-07:21:45,384 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_derivatives_wf.raw_sources" (mapflow 1/1).
+200814-07:21:49,708 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.seg_rpt" (mapflow 1/1).
+200814-07:21:49,771 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.recon_report" (mapflow 1/1).
+200814-07:21:50,10 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.trunc_mov" (mapflow 1/1).
+200814-07:21:50,14 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.registration" (mapflow 1/1).
+200814-07:21:50,17 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.tpl_moving" (mapflow 1/1).
+200814-07:21:50,19 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_rpt" (mapflow 1/1).
+200814-07:21:50,22 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_mask" (mapflow 1/1).
+200814-07:21:50,24 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_msk" (mapflow 1/1).
+200814-07:21:50,30 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_dseg" (mapflow 1/1).
+200814-07:21:50,33 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" (mapflow 1/3).
+200814-07:21:50,34 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" (mapflow 2/3).
+200814-07:21:50,34 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" (mapflow 3/3).
+200814-07:21:50,393 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.trunc_mov" (mapflow 1/1).
+200814-07:21:50,398 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.registration" (mapflow 1/1).
+200814-07:21:50,400 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.tpl_moving" (mapflow 1/1).
+200814-07:21:50,402 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_rpt" (mapflow 1/1).
+200814-07:21:50,405 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_mask" (mapflow 1/1).
+200814-07:21:50,407 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_reports_wf.norm_msk" (mapflow 1/1).
+200814-07:21:50,413 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_dseg" (mapflow 1/1).
+200814-07:21:50,416 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" (mapflow 1/3).
+200814-07:21:50,416 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" (mapflow 2/3).
+200814-07:21:50,417 nipype.workflow WARNING:
+	 Could not retrieve profiling information for node "fmriprep_wf.single_subject_7400_wf.anat_preproc_wf.anat_norm_wf.std_tpms" (mapflow 3/3).
+200814-07:21:50,440 nipype.workflow IMPORTANT:
+	 fMRIPrep finished successfully!
+200814-07:21:50,442 nipype.workflow IMPORTANT:
+	 Works derived from this fMRIPrep execution should include the boilerplate text found in <OUTPUT_PATH>/fmriprep/logs/CITATION.md.
+Finished tasks 22 with exit code 0

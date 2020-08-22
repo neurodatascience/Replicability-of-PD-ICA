@@ -1,0 +1,82 @@
+[environment]
+cpu_count = 40
+exec_env = "singularity"
+free_mem = 96.3
+overcommit_policy = "heuristic"
+overcommit_limit = "50%"
+nipype_version = "1.5.0"
+templateflow_version = "0.6.2"
+version = "20.1.1"
+
+[execution]
+bids_dir = "/data"
+bids_description_hash = "474bb8dc5e864ab67bf3f5b7019ccbb60c5ed5eda23066835303c73f9ebf9857"
+boilerplate_only = false
+debug = false
+fs_license_file = "/home/fmriprep/.freesurfer/license.txt"
+fs_subjects_dir = "/fsdir"
+layout = "BIDS Layout: .../data | Subjects: 36 | Sessions: 36 | Runs: 73"
+log_dir = "/output/fmriprep/logs"
+log_level = 25
+low_mem = false
+md_only_boilerplate = false
+notrack = true
+output_dir = "/output"
+output_spaces = "MNI152NLin2009cAsym:res-2 anat fsnative fsaverage:den-10k"
+reports_only = false
+run_uuid = "20200815-064217_62858e18-2a53-43b6-a91c-60a401628c49"
+participant_label = [ "0073",]
+templateflow_home = "/templateflow"
+work_dir = "/work"
+write_graph = true
+
+[workflow]
+anat_only = true
+aroma_err_on_warn = false
+aroma_melodic_dim = -200
+bold2t1w_dof = 6
+bold2t1w_init = "register"
+cifti_output = "91k"
+fmap_bspline = false
+force_syn = false
+hires = true
+ignore = []
+longitudinal = false
+medial_surface_nan = false
+regressors_all_comps = true
+regressors_dvars_th = 1.5
+regressors_fd_th = 0.5
+run_reconall = true
+skull_strip_fixed_seed = false
+skull_strip_template = "OASIS30ANTs"
+skull_strip_t1w = "force"
+spaces = "MNI152NLin2009cAsym:res-2 anat fsnative fsaverage:den-10k fsaverage:den-164k MNI152NLin6Asym:res-2"
+use_aroma = false
+use_syn_sdc = false
+
+[nipype]
+crashfile_format = "txt"
+get_linked_libs = false
+nprocs = 40
+omp_nthreads = 8
+plugin = "MultiProc"
+resource_monitor = true
+stop_on_first_crash = false
+
+[seeds]
+master = 1617
+ants = 64468
+
+[nipype.plugin_args]
+maxtasksperchild = 1
+raise_insufficient = false
+
+[execution.bids_filters.t1w]
+datatype = "anat"
+session = "1"
+suffix = "T1w"
+
+[execution.bids_filters.bold]
+datatype = "func"
+session = "1"
+suffix = "bold"

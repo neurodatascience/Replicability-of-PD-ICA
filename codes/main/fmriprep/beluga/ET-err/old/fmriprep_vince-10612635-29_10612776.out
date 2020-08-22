@@ -1,0 +1,13 @@
+/home/vincentq/scratch/ET_BIDS***/home/vincentq/scratch/ET_fmriprep_anat_20.1.1***/home/vincentq/scratch/src/ET_fmriprep_preopt.list******/home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg***ET
+Processing: sub-1790
+Running task 29
+Commandline: singularity run -B /home/vincentq:/home/fmriprep --home /home/fmriprep --cleanenv -B /home/vincentq/scratch/ET_BIDS:/data:ro -B /home/vincentq/scratch/ET_fmriprep_anat_20.1.1:/output -B /home/vincentq/scratch/src:/codes -B /home/vincentq/scratch/templateflow:/templateflow -B /home/vincentq/scratch/ET_fmriprep_anat_work:/work -B /home/vincentq/scratch/ET_fmriprep_anat_20.1.1/freesurfer-6.0.1:/fsdir /home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg /data /output participant --participant-label 1790 -w /work --output-spaces MNI152NLin2009cAsym:res-2 anat fsnative fsaverage5 --anat-only --bids-filter-file /codes/pre_opt.json --fs-subjects-dir /fsdir --fs-license-file /home/fmriprep/.freesurfer/license.txt --cifti-out 91k --return-all-components --write-graph --skip_bids_validation --notrack --resource-monitor
+200813-22:40:36,187 nipype.workflow IMPORTANT:
+	 
+    Running fMRIPREP version 20.1.1:
+      * BIDS dataset path: /data.
+      * Participant list: ['1790'].
+      * Run identifier: 20200813-223852_3d7ecb31-418d-4172-98fd-973c9a0110b7.
+      * Output spaces: MNI152NLin2009cAsym:res-2 anat fsnative fsaverage:den-10k.
+      * Pre-run FreeSurfer's SUBJECTS_DIR: /fsdir.
+Finished tasks 29 with exit code 1

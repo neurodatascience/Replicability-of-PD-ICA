@@ -1,0 +1,5 @@
+/home/vincentq/scratch/ET_BIDS***/home/vincentq/scratch/ET_fmriprep_anat_20.1.1***/home/vincentq/scratch/src/ET_fmriprep_preopt.list******/home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg***ET
+Processing: sub-1012 with home dir: fmriprep_home_1012
+Running task 13
+Commandline: singularity run -B fmriprep_home_1012:/home/fmriprep --home /home/fmriprep --cleanenv -B /home/vincentq/scratch/ET_BIDS:/data:ro -B /home/vincentq/scratch/ET_fmriprep_anat_20.1.1:/output -B /home/vincentq/scratch/src:/codes -B /home/vincentq/scratch/templateflow:/templateflow -B /home/vincentq/scratch/ET_fmriprep_anat_work:/work -B /home/vincentq/scratch/ET_fmriprep_anat_20.1.1/freesurfer-6.0.1:/fsdir /home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg /data /output participant --participant-label 1012 -w /work --output-spaces MNI152NLin2009cAsym:res-2 anat fsnative fsaverage5 --anat-only --bids-filter-file /codes/pre_opt.json --fs-subjects-dir /fsdir --fs-license-file /home/fmriprep/.freesurfer/license.txt --cifti-out 91k --return-all-components --write-graph --skip_bids_validation --notrack --resource-monitor
+Finished tasks 13 with exit code 2

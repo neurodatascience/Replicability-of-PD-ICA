@@ -1,0 +1,25 @@
+#!/bin/bash
+DATA_NAME=(${@:1:1})
+echo ${DATA_NAME}
+
+WD_DIR=${HOME}/scratch
+DATA_DIR=${WD_DIR}/${DATA_NAME}
+BIDS_DIR=${DATA_DIR}_BIDS
+
+OUT_DIR=${DATA_DIR}_template-anat
+OUT_NAME=${DATA_NAME}_template-anat
+LOG_DIR=${DATA_DIR}_template-anat.log
+SLURM_LOG_DIR=${DATA_DIR}_template-anat_slurm
+SLURM_LOG_DIR_NAME=${DATA_NAME}_template-anat_slurm
+
+RUN_ID=$(tail -c 9 ${LOG_DIR})
+mv t1_temp_vince-${RUN_ID}*.out ${SLURM_LOG_DIR_NAME}
+mv t1_temp_vince-${RUN_ID}*.err ${SLURM_LOG_DIR_NAME}
+mv crash*.txt ${SLURM_LOG_DIR_NAME}
+mv ${LOG_DIR} ${SLURM_LOG_DIR_NAME}
+
+#2 collect output
+tar -czvf ${OUT_NAME}.tar.gz ${OUT_NAME}
+tar -czvf ${SLURM_LOG_DIR_NAME}.tar.gz  ${SLURM_LOG_DIR_NAME}
+
+echo "Step5: template res has been prepared for ${DATA_NAME} Finished"

@@ -1,0 +1,31 @@
+#!/bin/bash
+DATA_NAME=(${@:1:1})
+echo ${DATA_NAME}
+
+WD_DIR=${HOME}/scratch
+DATA_DIR=${WD_DIR}/${DATA_NAME}
+BIDS_DIR=${DATA_DIR}_BIDS
+SUB_LIST=${WD_DIR}/${DATA_NAME}_mriqc_subjects.list
+CON_IMG_DIR=${WD_DIR}/container_images/mriqc_new_v0.15.2.simg
+
+OUT_DIR=${DATA_DIR}_mriqc
+LOG_DIR=${DATA_DIR}_mriqc.log
+OUT_NAME=${DATA_NAME}_mriqc
+SLURM_LOG_DIR=${DATA_DIR}_mriqc_slurm_log
+SLURM_LOG_DIR_NAME=${DATA_NAME}_mriqc_slurm_log
+MRIQC_WORK_DIR=${DATA_DIR}_mriqc_work
+
+# 1. run the group level
+singularity run --cleanenv \
+        -B ${BIDS_DIR}:/data:ro \
+        -B ${OUT_DIR}:/out \
+        -B ${MRIQC_WORK_DIR}:/mriqc_work \
+        ${CON_IMG} /data /out group -w /mriqc_work --verbose-reports
+
+#2 collect output
+RUN_ID=$(tail -c 9 ${LOG_DIR})
+mv mriqc_vince-${RUN_ID}*.out ${SLURM_LOG_DIR}
+mv mriqc_vince-${RUN_ID}*.err ${SLURM_LOG_DIR}
+cp ${SUB_LIST} ${SLURM_LOG_DIR}/${DATA_NAME}_mriqc_subjects.list
+tar -czvf ${OUT_NAME}.tar.gz  ${OUT_NAME}
+tar -czvf ${SLURM_LOG_DIR_NAME}.tar.gz  ${SLURM_LOG_DIR_NAME}
