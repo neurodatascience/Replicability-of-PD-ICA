@@ -1,5 +1,0 @@
-/home/vincentq/scratch/PD_BIDS***/home/vincentq/scratch/PD_fmriprep_anat_20.1.1***/home/vincentq/scratch/src/PD_fmriprep_preopt.list******/home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg***PD
-Processing: sub-0006 with home dir: fmriprep_home_0006
-Running task 48
-Commandline: singularity run -B fmriprep_home_0006:/home/fmriprep --home /home/fmriprep --cleanenv -B /home/vincentq/scratch/PD_BIDS:/data:ro -B /home/vincentq/scratch/PD_fmriprep_anat_20.1.1:/output -B /home/vincentq/scratch/src:/codes -B /home/vincentq/scratch/templateflow:/templateflow -B /home/vincentq/scratch/PD_fmriprep_anat_work:/work -B /home/vincentq/scratch/PD_fmriprep_anat_20.1.1/freesurfer-6.0.1:/fsdir /home/vincentq/scratch/container_images/fmriprep_v20.1.1.simg /data /output participant --participant-label 0006 -w /work --output-spaces MNI152NLin2009cAsym:res-2 anat fsnative fsaverage5 --bids-filter-file /codes/pre_opt.json --fs-subjects-dir /fsdir --fs-license-file /home/fmriprep/.freesurfer/license.txt --cifti-out 91k --return-all-components --write-graph --skip_bids_validation --notrack --resource-monitor
-Finished tasks 48 with exit code 2
