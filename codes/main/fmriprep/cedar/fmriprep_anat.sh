@@ -21,8 +21,13 @@ FREESURFER_LICENSE="${WD_DIR}/container_images"
 TEMPLATEFLOW_HOST_HOME=$HOME/scratch/templateflow
 
 RUN_ID=$(tail -c 9 ${LOG_DIR})
-rm fmriprep_vince-${RUN_ID}*.out
-rm fmriprep_vince-${RUN_ID}*.err
+if [ -z $RUN_ID ];then
+  echo 'no previous run found...'
+else
+  echo "previous run $RUN_ID found, deleting logs..."
+  rm fmriprep_vince-${RUN_ID}*.out
+  rm fmriprep_vince-${RUN_ID}*.err
+fi
 
 rm -rf ${OUT_DIR}
 rm -rf ${OUT_DIR}.tar.gz

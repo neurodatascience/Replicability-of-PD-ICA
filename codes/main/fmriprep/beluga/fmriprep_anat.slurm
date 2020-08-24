@@ -1,11 +1,11 @@
 #!/bin/bash
 #
 #SBATCH -J fmriprep_vince
-#SBATCH --time=18:00:00
+#SBATCH --time=24:00:00
 #SBATCH --account=rpp-aevans-ab
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=8G
-#SBATCH --array=1-39
+#SBATCH --array=1-37
 # Outputs ----------------------------------
 #SBATCH -o %x-%A-%a_%j.out
 #SBATCH -e %x-%A-%a_%j.err
@@ -62,11 +62,11 @@ find ${LOCAL_FREESURFER_DIR}/sub-$SUB_ID/ -name "*IsRunning*" -type f -delete
 # Compose the command line
 cmd="${SINGULARITY_CMD} /data /output participant --participant-label $SUB_ID \
 -w /work --output-spaces MNI152NLin2009cAsym:res-2 anat fsnative fsaverage5 \
---anat-only --bids-filter-file /codes/pre_opt.json --fs-subjects-dir /fsdir \
+--bids-filter-file /codes/pre_opt.json --fs-subjects-dir /fsdir \
 --fs-license-file /home/fmriprep/.freesurfer/license.txt \
 --cifti-out 91k --return-all-components \
 --write-graph --skip_bids_validation --notrack --resource-monitor"
-# --bids-filter-file ${BIDS_FILTER} \
+# --bids-filter-file ${BIDS_FILTER} --anat-only\
 # Setup done, run the command
 echo Running task ${SLURM_ARRAY_TASK_ID}
 echo Commandline: $cmd
