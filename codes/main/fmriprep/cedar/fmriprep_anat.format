@@ -8,7 +8,7 @@ FMRIPREP_VER=20.1.1
 DERIVS_DIR_NAME=${DATA_NAME}_fmriprep_anat_${FMRIPREP_VER}
 LOG_DIR_NAME=${DATA_NAME}_fmriprep_anat_slurm_log
 
-RUN_ID=$(tail -c 9 ${DATA_NAME}_fmriprep.log)
+RUN_ID=$(tail -c 9 ${DATA_NAME}_fmriprep_anat.log)
 mv fmriprep_vince-${RUN_ID}*.out ${LOG_DIR_NAME}
 mv fmriprep_vince-${RUN_ID}*.err ${LOG_DIR_NAME}
 
