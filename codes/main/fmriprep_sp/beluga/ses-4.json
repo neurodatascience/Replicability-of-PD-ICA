@@ -1,13 +1,12 @@
 {
     "t1w": {
         "datatype": "anat",
-        "session": "04",
-        "acquisition": null,
+        "session": "4",
         "suffix": "T1w"
     },
     "bold": {
         "datatype": "func",
-        "session": "04",
+        "session": "4",
         "suffix": "bold"
     }
 }

@@ -20,7 +20,7 @@ SES_ID=(${@:4:1})
 WD_DIR=${HOME}/scratch
 DATA_DIR=${WD_DIR}/${DATA_NAME}
 BIDS_DIR=${DATA_DIR}_BIDS
-DERIVS_DIR=${DATA_DIR}_fmriprep_20.1.1_sp/${SUB_ID}_${SES_ID}
+DERIVS_DIR=${DATA_DIR}_fmriprep_sp_20.1.1/${SUB_ID}_${SES_ID}
 CODE_DIR=${WD_DIR}/src
 
 echo ${BIDS_DIR}***${DERIVS_DIR}***${CON_IMG_DIR}***${DATA_NAME}***${SUB_ID}***${SES_ID}

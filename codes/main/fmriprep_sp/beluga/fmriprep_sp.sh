@@ -11,7 +11,7 @@ CODE_COLLECT=${CODE_DIR}/fmriprep_sp.format
 
 CON_IMG_DIR=${WD_DIR}/container_images/fmriprep_v20.1.1.simg
 
-OUT_DIR=${DATA_DIR}_fmriprep_20.1.1_sp
+OUT_DIR=${DATA_DIR}_fmriprep_sp_20.1.1
 LOG_DIR=${DATA_DIR}_fmriprep_sp.log
 SLURM_LOG_DIR=${DATA_DIR}_fmriprep_sp_slurm_log
 WORK_DIR=${DATA_DIR}_fmriprep_sp_work
@@ -19,14 +19,8 @@ WORK_DIR=${DATA_DIR}_fmriprep_sp_work
 FREESURFER_LICENSE="${WD_DIR}/container_images"
 TEMPLATEFLOW_HOST_HOME=$HOME/scratch/templateflow
 
-RUN_ID=$(tail -c 9 ${LOG_DIR})
-if [ -z $RUN_ID ];then
-  echo 'no previous run found...'
-else
-  echo "previous run $RUN_ID found, deleting logs..."
-  rm fmriprep_vince-${RUN_ID}*.out
-  rm fmriprep_vince-${RUN_ID}*.err
-fi
+rm fmriprep_vince-*.out
+rm fmriprep_vince-*.err
 
 rm -rf ${OUT_DIR}
 rm -rf ${WORK_DIR}
@@ -43,32 +37,32 @@ mkdir -p ${SLURM_LOG_DIR}
 echo "Step1: subjects folder created!"
 echo "Step2: starting fmriprep-SP!"
 echo "Submitting sub-1690, sub-1920, sub-2400, sub-3900 ses-2!"
-SUB_ID=sub-1690
+SUB_ID=1690
 SES_ID=ses-2.json
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
-SUB_ID=sub-1920
+SUB_ID=1920
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
-SUB_ID=sub-2400
+SUB_ID=2400
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
-SUB_ID=sub-3900
+SUB_ID=3900
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
 echo "Submitting sub-1690, sub-1920, sub-2400, sub-3900 ses-3!"
-SUB_ID=sub-1920
+SUB_ID=1920
 SES_ID=ses-3.json
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
-SUB_ID=sub-2400
+SUB_ID=2400
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
-SUB_ID=sub-3900
+SUB_ID=3900
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
 echo "Submitting sub-1920 ses-4!"
-SUB_ID=sub-1920
+SUB_ID=1920
 SES_ID=ses-4.json
 mkdir -p ${OUT_DIR}/${SUB_ID}_${SES_ID}
 sbatch ${CODE_SLURM} ${DATA_NAME} ${CON_IMG_DIR} ${SUB_ID} ${SES_ID} >> ${LOG_DIR}
