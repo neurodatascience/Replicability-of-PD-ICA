@@ -1,9 +1,8 @@
-# Vincent neuro_arsenal, 29th Feb. 2020
+# Vincent vincent_env, 29th Feb. 2020
 # based on fmriprep-v20.0.0
 # Use Ubuntu 16.04 LTS
 FROM ubuntu:xenial-20200114
 ENV PROJ_DIR=${HOME}/project
-ENV FMRIPREP_DIR=${PROJ_DIR}/fmriprep
 # Pre-cache neurodebian key
 COPY docker/files/neurodebian.gpg /usr/local/etc/neurodebian.gpg
 
@@ -155,6 +154,7 @@ RUN conda install -c conda-forge -y python=3.7.0 \
                      nibabel=3.1.0 \
                      dipy=1.1.0 \
                      fury=0.5.1 \
+                     statsmodels=0.12.0\
                      jupyterlab=1.2.5 \
                      #niflow-nipype1-workflows=0.0.4 \ # install this will cause matplotlib problem
                      zlib; sync && \
@@ -194,25 +194,10 @@ RUN pip install --no-cache-dir "$( grep templateflow fmriprep-setup.cfg | xargs 
     find $HOME/.cache/templateflow -type d -exec chmod go=u {} + && \
     find $HOME/.cache/templateflow -type f -exec chmod go=u {} +
 
+# Installing nistats
+RUN pip install --no-cache-dir -U --user nistats
 # Installing FMRIPREP
-COPY fmriprep /src/fmriprep
 ARG VERSION
-# Force static versioning within container
-RUN echo "${VERSION}" > /src/fmriprep/fmriprep/VERSION && \
-    echo "include fmriprep/VERSION" >> /src/fmriprep/MANIFEST.in && \
-    pip install --no-cache-dir "/src/fmriprep[all]"
-
-RUN install -m 0755 \
-    /src/fmriprep/scripts/generate_reference_mask.py \
-    /usr/local/bin/generate_reference_mask
-
-RUN find $HOME -type d -exec chmod go=u {} + && \
-    find $HOME -type f -exec chmod go=u {} + && \
-    rm -rf $HOME/.npm $HOME/.conda $HOME/.empty
-
-ENV IS_DOCKER_8395080871=1
-
-RUN ldconfig
 WORKDIR /tmp/
 # ENTRYPOINT ["/usr/local/miniconda/bin/fmriprep"]
 
@@ -220,7 +205,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="neuro_arsenal" \
+      org.label-schema.name="vincent_env" \
       org.label-schema.description="Vincent docker based on fMRIPrep" \
       # org.label-schema.url="http://fmriprep.org" \
       # org.label-schema.vcs-ref=$VCS_REF \
@@ -231,7 +216,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 # set up code-server (need net-tools for initialization) - V2.1665-vsc1.39.2
 RUN curl -o /tmp/code-server.tar.gz -SL https://github.com/cdr/code-server/releases/download/2.1665-vsc1.39.2/code-server2.1665-vsc1.39.2-linux-x86_64.tar.gz
 
-RUN mkdir /src/codeserver &&\
+RUN mkdir -p /src/codeserver &&\
     tar -xvf /tmp/code-server.tar.gz -C /src/codeserver --strip-components=1
 
 RUN /src/codeserver/code-server --install-extension eamodio.gitlens && \
