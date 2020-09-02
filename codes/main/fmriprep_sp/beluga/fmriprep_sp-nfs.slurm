@@ -58,7 +58,7 @@ find ${LOCAL_FREESURFER_DIR}/sub-$SUB_ID/ -name "*IsRunning*" -type f -delete
 
 # Compose the command line
 cmd="${SINGULARITY_CMD} /data /output participant --participant-label $SUB_ID \
--w /work --output-spaces MNI152NLin2009cAsym:res-2 --fs-no-reconall\
+-w /work --output-spaces MNI152NLin2009cAsym:res-2 --fs-no-reconall \
 --bids-filter-file /codes/${SES_ID} --fs-subjects-dir /fsdir \
 --fs-license-file /home/fmriprep/.freesurfer/license.txt \
 --return-all-components \
