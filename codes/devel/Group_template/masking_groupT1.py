@@ -90,7 +90,7 @@ if __name__ == '__main__':
     args=get_args()
     DATA_DIR=args.data;     OUT_DIR=args.output
     SUB_LIST=args.sub_list;
-    print("The input data folder: ", DATA_DIR, type(DATA_DIR))
-    print("The output data folder: ", OUT_DIR, type(OUT_DIR) )
-    print("The subject list folder: ",      SRC_DIR, type(SRC_DIR))
+    print("The input data folder: ",  DATA_DIR, type(DATA_DIR))
+    print("The output data folder: ",  OUT_DIR, type(OUT_DIR) )
+    print("The subject list folder: ", SRC_DIR, type(SRC_DIR) )
     main(DATA_DIR, OUT_DIR, SRC_DIR)
