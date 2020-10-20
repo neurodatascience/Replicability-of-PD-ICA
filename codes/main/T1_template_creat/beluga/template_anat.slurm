@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J t1_temp_vince
 #SBATCH --time=48:00:00
-#SBATCH --account=def-jbpoline
+#--account=rpp-aevans-ab
 #SBATCH --cpus-per-task=24
 #SBATCH --mem-per-cpu=6G
 # Outputs ----------------------------------
@@ -24,4 +24,4 @@ singularity exec -B $HOME:/home/neuro --home /home/neuro --cleanenv \
         -B ${OUT_DIR}:/output \
         -B ${CODES_DIR}:/codes:ro \
         ${IMG_DIR} python /codes/${SRC_FILE} --data=/data --output=/output --sub_list=/codes/${SINGULARITY_SUB_LIST} --nprocs=24
-#--account=rpp-aevans-ab
+
