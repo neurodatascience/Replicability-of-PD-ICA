@@ -4,3 +4,9 @@ codes/sMRI/*
 codes/tmp/*
 docker/*
 fmriprep/*
+codes/devel/Group_template/mni1InverseWarp.nii.gz
+codes/devel/Group_template/mni1Warp.nii.gz
+codes/devel/Group_template/mniInverseWarped.nii.gz
+codes/devel/Group_template/mniWarped.nii.gz
+codes/devel/fs_analysis/ad_group_corr_ic0.png
+codes/devel/fs_analysis/ad_group_corr_ic0.png
