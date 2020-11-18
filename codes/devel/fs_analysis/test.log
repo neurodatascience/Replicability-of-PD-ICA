@@ -1,0 +1,488 @@
+  Multiple Comparison of Means - Tukey HSD, FWER=0.05  
+=======================================================
+group1 group2 meandiff p-adj    lower    upper   reject
+-------------------------------------------------------
+    ET     NC 186.5225  0.001   99.8746 273.1704   True
+    ET     PD  95.9103 0.0193   12.8844 178.9363   True
+    NC     PD -90.6121 0.0224 -170.6679 -10.5564   True
+-------------------------------------------------------
+Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+====================================================
+group1 group2 meandiff p-adj   lower   upper  reject
+----------------------------------------------------
+    ET     NC   0.4765  0.001  0.2989  0.6541   True
+    ET     PD   0.2986  0.001  0.1285  0.4688   True
+    NC     PD  -0.1779 0.0303 -0.3419 -0.0138   True
+----------------------------------------------------
+0th Tukey HSD test positive -->> 3rd-Ventricle
+5th Tukey HSD test positive -->> BrainSegVol-to-eTIV
+13th Tukey HSD test positive -->> CSF
+15th Tukey HSD test positive -->> CortexVol
+17th Tukey HSD test positive -->> Left-Amygdala
+23th Tukey HSD test positive -->> Left-Lateral-Ventricle
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+30th Tukey HSD test positive -->> Left-choroid-plexus
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+35th Tukey HSD test positive -->> Optic-Chiasm
+42th Tukey HSD test positive -->> Right-Inf-Lat-Vent
+43th Tukey HSD test positive -->> Right-Lateral-Ventricle
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+
+NaN result encountered.
+58th Tukey HSD test positive -->> TotalGrayVol
+62th Tukey HSD test positive -->> lhCortexVol
+66th Tukey HSD test positive -->> lh_G&S_cingul-Ant_thickness
+70th Tukey HSD test positive -->> lh_G&S_cingul-Mid-Ant_thickness
+71th Tukey HSD test positive -->> lh_G&S_cingul-Mid-Ant_volume
+74th Tukey HSD test positive -->> lh_G&S_cingul-Mid-Post_thickness
+78th Tukey HSD test positive -->> lh_G&S_frontomargin_thickness
+82th Tukey HSD test positive -->> lh_G&S_occipital_inf_thickness
+86th Tukey HSD test positive -->> lh_G&S_paracentral_thickness
+87th Tukey HSD test positive -->> lh_G&S_paracentral_volume
+90th Tukey HSD test positive -->> lh_G&S_subcentral_thickness
+91th Tukey HSD test positive -->> lh_G&S_subcentral_volume
+94th Tukey HSD test positive -->> lh_G&S_transv_frontopol_thickness
+95th Tukey HSD test positive -->> lh_G&S_transv_frontopol_volume
+98th Tukey HSD test positive -->> lh_G_Ins_lg&S_cent_ins_thickness
+102th Tukey HSD test positive -->> lh_G_cingul-Post-dorsal_thickness
+106th Tukey HSD test positive -->> lh_G_cingul-Post-ventral_thickness
+110th Tukey HSD test positive -->> lh_G_cuneus_thickness
+114th Tukey HSD test positive -->> lh_G_front_inf-Opercular_thickness
+118th Tukey HSD test positive -->> lh_G_front_inf-Orbital_thickness
+122th Tukey HSD test positive -->> lh_G_front_inf-Triangul_thickness
+123th Tukey HSD test positive -->> lh_G_front_inf-Triangul_volume
+126th Tukey HSD test positive -->> lh_G_front_middle_thickness
+127th Tukey HSD test positive -->> lh_G_front_middle_volume
+130th Tukey HSD test positive -->> lh_G_front_sup_thickness
+131th Tukey HSD test positive -->> lh_G_front_sup_volume
+138th Tukey HSD test positive -->> lh_G_oc-temp_lat-fusifor_thickness
+142th Tukey HSD test positive -->> lh_G_oc-temp_med-Lingual_thickness
+146th Tukey HSD test positive -->> lh_G_oc-temp_med-Parahip_thickness
+150th Tukey HSD test positive -->> lh_G_occipital_middle_thickness
+154th Tukey HSD test positive -->> lh_G_occipital_sup_thickness
+158th Tukey HSD test positive -->> lh_G_orbital_thickness
+162th Tukey HSD test positive -->> lh_G_pariet_inf-Angular_thickness
+163th Tukey HSD test positive -->> lh_G_pariet_inf-Angular_volume
+166th Tukey HSD test positive -->> lh_G_pariet_inf-Supramar_thickness
+170th Tukey HSD test positive -->> lh_G_parietal_sup_thickness
+174th Tukey HSD test positive -->> lh_G_postcentral_thickness
+175th Tukey HSD test positive -->> lh_G_postcentral_volume
+178th Tukey HSD test positive -->> lh_G_precentral_thickness
+179th Tukey HSD test positive -->> lh_G_precentral_volume
+182th Tukey HSD test positive -->> lh_G_precuneus_thickness
+183th Tukey HSD test positive -->> lh_G_precuneus_volume
+194th Tukey HSD test positive -->> lh_G_temp_sup-G_T_transv_thickness
+198th Tukey HSD test positive -->> lh_G_temp_sup-Lateral_thickness
+202th Tukey HSD test positive -->> lh_G_temp_sup-Plan_polar_thickness
+203th Tukey HSD test positive -->> lh_G_temp_sup-Plan_polar_volume
+206th Tukey HSD test positive -->> lh_G_temp_sup-Plan_tempo_thickness
+208th Tukey HSD test positive -->> lh_G_temporal_inf_area
+214th Tukey HSD test positive -->> lh_G_temporal_middle_thickness
+218th Tukey HSD test positive -->> lh_Lat_Fis-ant-Horizont_thickness
+222th Tukey HSD test positive -->> lh_Lat_Fis-ant-Vertical_thickness
+226th Tukey HSD test positive -->> lh_Lat_Fis-post_thickness
+228th Tukey HSD test positive -->> lh_MeanThickness_thickness
+234th Tukey HSD test positive -->> lh_Pole_temporal_meancurv
+235th Tukey HSD test positive -->> lh_Pole_temporal_thickness
+239th Tukey HSD test positive -->> lh_S_calcarine_thickness
+243th Tukey HSD test positive -->> lh_S_central_thickness
+244th Tukey HSD test positive -->> lh_S_central_volume
+247th Tukey HSD test positive -->> lh_S_cingul-Marginalis_thickness
+248th Tukey HSD test positive -->> lh_S_cingul-Marginalis_volume
+251th Tukey HSD test positive -->> lh_S_circular_insula_ant_thickness
+255th Tukey HSD test positive -->> lh_S_circular_insula_inf_thickness
+259th Tukey HSD test positive -->> lh_S_circular_insula_sup_thickness
+263th Tukey HSD test positive -->> lh_S_collat_transv_ant_thickness
+267th Tukey HSD test positive -->> lh_S_collat_transv_post_thickness
+271th Tukey HSD test positive -->> lh_S_front_inf_thickness
+275th Tukey HSD test positive -->> lh_S_front_middle_thickness
+279th Tukey HSD test positive -->> lh_S_front_sup_thickness
+287th Tukey HSD test positive -->> lh_S_intrapariet&P_trans_thickness
+288th Tukey HSD test positive -->> lh_S_intrapariet&P_trans_volume
+291th Tukey HSD test positive -->> lh_S_oc-temp_lat_thickness
+295th Tukey HSD test positive -->> lh_S_oc-temp_med&Lingual_thickness
+299th Tukey HSD test positive -->> lh_S_oc_middle&Lunatus_thickness
+303th Tukey HSD test positive -->> lh_S_oc_sup&transversal_thickness
+307th Tukey HSD test positive -->> lh_S_occipital_ant_thickness
+311th Tukey HSD test positive -->> lh_S_orbital-H_Shaped_thickness
+315th Tukey HSD test positive -->> lh_S_orbital_lateral_thickness
+323th Tukey HSD test positive -->> lh_S_parieto_occipital_thickness
+331th Tukey HSD test positive -->> lh_S_postcentral_thickness
+335th Tukey HSD test positive -->> lh_S_precentral-inf-part_thickness
+339th Tukey HSD test positive -->> lh_S_precentral-sup-part_thickness
+347th Tukey HSD test positive -->> lh_S_subparietal_thickness
+348th Tukey HSD test positive -->> lh_S_subparietal_volume
+355th Tukey HSD test positive -->> lh_S_temporal_sup_thickness
+359th Tukey HSD test positive -->> lh_S_temporal_transverse_thickness
+364th Tukey HSD test positive -->> rhCortexVol
+372th Tukey HSD test positive -->> rh_G&S_cingul-Mid-Ant_thickness
+376th Tukey HSD test positive -->> rh_G&S_cingul-Mid-Post_thickness
+388th Tukey HSD test positive -->> rh_G&S_paracentral_thickness
+389th Tukey HSD test positive -->> rh_G&S_paracentral_volume
+392th Tukey HSD test positive -->> rh_G&S_subcentral_thickness
+396th Tukey HSD test positive -->> rh_G&S_transv_frontopol_thickness
+400th Tukey HSD test positive -->> rh_G_Ins_lg&S_cent_ins_thickness
+401th Tukey HSD test positive -->> rh_G_Ins_lg&S_cent_ins_volume
+408th Tukey HSD test positive -->> rh_G_cingul-Post-ventral_thickness
+412th Tukey HSD test positive -->> rh_G_cuneus_thickness
+416th Tukey HSD test positive -->> rh_G_front_inf-Opercular_thickness
+420th Tukey HSD test positive -->> rh_G_front_inf-Orbital_thickness
+424th Tukey HSD test positive -->> rh_G_front_inf-Triangul_thickness
+428th Tukey HSD test positive -->> rh_G_front_middle_thickness
+429th Tukey HSD test positive -->> rh_G_front_middle_volume
+432th Tukey HSD test positive -->> rh_G_front_sup_thickness
+440th Tukey HSD test positive -->> rh_G_oc-temp_lat-fusifor_thickness
+444th Tukey HSD test positive -->> rh_G_oc-temp_med-Lingual_thickness
+445th Tukey HSD test positive -->> rh_G_oc-temp_med-Lingual_volume
+448th Tukey HSD test positive -->> rh_G_oc-temp_med-Parahip_thickness
+449th Tukey HSD test positive -->> rh_G_oc-temp_med-Parahip_volume
+452th Tukey HSD test positive -->> rh_G_occipital_middle_thickness
+456th Tukey HSD test positive -->> rh_G_occipital_sup_thickness
+457th Tukey HSD test positive -->> rh_G_occipital_sup_volume
+464th Tukey HSD test positive -->> rh_G_pariet_inf-Angular_thickness
+465th Tukey HSD test positive -->> rh_G_pariet_inf-Angular_volume
+468th Tukey HSD test positive -->> rh_G_pariet_inf-Supramar_thickness
+469th Tukey HSD test positive -->> rh_G_pariet_inf-Supramar_volume
+472th Tukey HSD test positive -->> rh_G_parietal_sup_thickness
+473th Tukey HSD test positive -->> rh_G_parietal_sup_volume
+476th Tukey HSD test positive -->> rh_G_postcentral_thickness
+477th Tukey HSD test positive -->> rh_G_postcentral_volume
+480th Tukey HSD test positive -->> rh_G_precentral_thickness
+481th Tukey HSD test positive -->> rh_G_precentral_volume
+484th Tukey HSD test positive -->> rh_G_precuneus_thickness
+485th Tukey HSD test positive -->> rh_G_precuneus_volume
+496th Tukey HSD test positive -->> rh_G_temp_sup-G_T_transv_thickness
+497th Tukey HSD test positive -->> rh_G_temp_sup-G_T_transv_volume
+500th Tukey HSD test positive -->> rh_G_temp_sup-Lateral_thickness
+504th Tukey HSD test positive -->> rh_G_temp_sup-Plan_polar_thickness
+505th Tukey HSD test positive -->> rh_G_temp_sup-Plan_polar_volume
+508th Tukey HSD test positive -->> rh_G_temp_sup-Plan_tempo_thickness
+512th Tukey HSD test positive -->> rh_G_temporal_inf_thickness
+516th Tukey HSD test positive -->> rh_G_temporal_middle_thickness
+517th Tukey HSD test positive -->> rh_G_temporal_middle_volume
+524th Tukey HSD test positive -->> rh_Lat_Fis-ant-Vertical_thickness
+526th Tukey HSD test positive -->> rh_Lat_Fis-post_area
+528th Tukey HSD test positive -->> rh_Lat_Fis-post_thickness
+530th Tukey HSD test positive -->> rh_MeanThickness_thickness
+537th Tukey HSD test positive -->> rh_Pole_temporal_thickness
+541th Tukey HSD test positive -->> rh_S_calcarine_thickness
+545th Tukey HSD test positive -->> rh_S_central_thickness
+546th Tukey HSD test positive -->> rh_S_central_volume
+549th Tukey HSD test positive -->> rh_S_cingul-Marginalis_thickness
+550th Tukey HSD test positive -->> rh_S_cingul-Marginalis_volume
+553th Tukey HSD test positive -->> rh_S_circular_insula_ant_thickness
+556th Tukey HSD test positive -->> rh_S_circular_insula_inf_meancurv
+557th Tukey HSD test positive -->> rh_S_circular_insula_inf_thickness
+561th Tukey HSD test positive -->> rh_S_circular_insula_sup_thickness
+565th Tukey HSD test positive -->> rh_S_collat_transv_ant_thickness
+569th Tukey HSD test positive -->> rh_S_collat_transv_post_thickness
+573th Tukey HSD test positive -->> rh_S_front_inf_thickness
+577th Tukey HSD test positive -->> rh_S_front_middle_thickness
+581th Tukey HSD test positive -->> rh_S_front_sup_thickness
+585th Tukey HSD test positive -->> rh_S_interm_prim-Jensen_thickness
+589th Tukey HSD test positive -->> rh_S_intrapariet&P_trans_thickness
+590th Tukey HSD test positive -->> rh_S_intrapariet&P_trans_volume
+593th Tukey HSD test positive -->> rh_S_oc-temp_lat_thickness
+597th Tukey HSD test positive -->> rh_S_oc-temp_med&Lingual_thickness
+601th Tukey HSD test positive -->> rh_S_oc_middle&Lunatus_thickness
+605th Tukey HSD test positive -->> rh_S_oc_sup&transversal_thickness
+609th Tukey HSD test positive -->> rh_S_occipital_ant_thickness
+610th Tukey HSD test positive -->> rh_S_occipital_ant_volume
+617th Tukey HSD test positive -->> rh_S_orbital_lateral_thickness
+625th Tukey HSD test positive -->> rh_S_parieto_occipital_thickness
+629th Tukey HSD test positive -->> rh_S_pericallosal_thickness
+633th Tukey HSD test positive -->> rh_S_postcentral_thickness
+634th Tukey HSD test positive -->> rh_S_postcentral_volume
+637th Tukey HSD test positive -->> rh_S_precentral-inf-part_thickness
+638th Tukey HSD test positive -->> rh_S_precentral-inf-part_volume
+641th Tukey HSD test positive -->> rh_S_precentral-sup-part_thickness
+642th Tukey HSD test positive -->> rh_S_precentral-sup-part_volume
+649th Tukey HSD test positive -->> rh_S_subparietal_thickness
+653th Tukey HSD test positive -->> rh_S_temporal_inf_thickness
+657th Tukey HSD test positive -->> rh_S_temporal_sup_thickness
+658th Tukey HSD test positive -->> rh_S_temporal_sup_volume
+661th Tukey HSD test positive -->> rh_S_temporal_transverse_thickness
+183
+/usr/local/miniconda/lib/python3.7/site-packages/ipykernel_launcher.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+/usr/local/miniconda/lib/python3.7/site-packages/ipykernel_launcher.py:21: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+/usr/local/miniconda/lib/python3.7/site-packages/ipykernel_launcher.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -0.005218  
+C(sex)               0.002870 -0.007345  
+C(diagnosis):C(sex)  0.001094 -0.019288  
+age                  0.003184 -0.007034  
+Residual                  NaN       NaN  
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -0.005218  
+C(sex)               0.002870 -0.007345  
+C(diagnosis):C(sex)  0.001094 -0.019288  
+age                  0.003184 -0.007034  
+Residual                  NaN       NaN  
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -0.005218  
+C(sex)               0.002870 -0.007345  
+C(diagnosis):C(sex)  0.001094 -0.019288  
+age                  0.003184 -0.007034  
+Residual                  NaN       NaN  
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -0.005218  
+C(sex)               0.002870 -0.007345  
+C(diagnosis):C(sex)  0.001094 -0.019288  
+age                  0.003184 -0.007034  
+Residual                  NaN       NaN  
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -0.005218  
+C(sex)               0.002870 -0.007345  
+C(diagnosis):C(sex)  0.001094 -0.019288  
+age                  0.003184 -0.007034  
+Residual                  NaN       NaN  
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         9.075682e+05   2.0  4.537841e+05  0.045409  0.955627   
+C(sex)               1.183551e+07   1.0  1.183551e+07  1.184350  0.279225   
+C(diagnosis):C(sex)  1.245857e+07   2.0  6.229286e+06  0.623349  0.538324   
+age                  3.261657e+07   1.0  3.261657e+07  3.263857  0.073988   
+Residual             9.493598e+08  95.0  9.993261e+06       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.000901 -0.018757  
+C(sex)               0.011751  0.001811  
+C(diagnosis):C(sex)  0.012370 -0.007401  
+age                  0.032384  0.022241  
+Residual                  NaN       NaN  
+                           sum_sq    df       mean_sq         F    PR(>F)  \
+C(diagnosis)         1.088437e+08   2.0  5.442183e+07  0.743848  0.478029   
+C(sex)               2.040270e+07   1.0  2.040270e+07  0.278868  0.598675   
+C(diagnosis):C(sex)  7.776243e+06   2.0  3.888121e+06  0.053144  0.948272   
+age                  2.263700e+07   1.0  2.263700e+07  0.309407  0.579352   
+Residual             6.950443e+09  95.0  7.316255e+07       NaN       NaN   
+
+                       eta_sq  omega_sq  
+C(diagnosis)         0.015308 -0.005218  
+C(sex)               0.002870 -0.007345  
+C(diagnosis):C(sex)  0.001094 -0.019288  
+age                  0.003184 -0.007034  
+Residual                  NaN       NaN  
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+
+
+                                Variable      N        Mean         SD  \
+0  Cerebellum-White-Matter_AgeSexRemoved  102.0  26812.9717  3188.3921   
+
+         SE   95% Conf.    Interval  
+0  315.6979  26186.7121  27439.2314  
+
+
+            N        Mean         SD        SE   95% Conf.    Interval
+diagnosis                                                             
+ET         29  26186.6151  2990.5739  555.3356  25049.0616  27324.1686
+NC         33
+(0.9927974939346313, 0.86811363697052)
+(0.9782775044441223, 0.09109637886285782)
+
+
+                                Variable    
+
+
+                                Variable      N        Mean         SD  \
+0  Cerebellum-White-Matter_AgeSexRemoved  102.0  26812.9717  3188.3921   
+
+         SE   95% Conf.    Interval  
+0  315.6979  26186.7121  27439.2314  
+
+
+            N        Mean         SD        SE   95% Conf.    Interval
+diagnosis                                                             
+ET         29  26186.6151  2990.5739  555.3356  25049.0616  27324.1686
+NC         33  27145.0292  3117.8287  542.7443  26039.4952  28250.5632
+PD         40  26993.1329  3392.8646  536.4590  25908.0421  28078.2236
+None
+     Mean         SD  \
+0  Cerebellum-White-Matter_AgeSexRemoved  102.0  26812.9717  3188.3921   
+
+         SE   95% Conf.    Interval  
+0  315.6979  26186.7121  27439.2314  
+
+
+            N        Mean         SD        SE   95% Conf.    Interval
+diagnosis                                                             
+ET         29  26186.6151  2990.5739  555.3356  25049.0616  27324.1686
+NC         33  27145.0292  3117.8287  542.7443  26039.4952  28250.5632
+PD         40  26993.1329  3392.8646  536.4590  25908.0421  28078.2236
+None
